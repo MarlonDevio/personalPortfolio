@@ -1,0 +1,81 @@
+/****COLORS
+Background: 000000 (black)
+
+BLUE Accents
+#daf6f3
+#afeee6
+#57dccd
+#52d1c3
+#47b2a6
+#2d6f68
+
+DARK BLUE ACCENTS
+#c0d0d2
+#7b9fa4
+#003942
+#002025
+****/
+
+:root {
+  --color: linear-gradient(90deg, rgba(9,61,70,1) 0%, rgba(100,187,175,1) 100%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color);
+
+}
+
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+#hero {
+    height: 100vh;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+
+}
+nav ul li {
+    font-size: 1.5rem;
+    list-style: none;
+    display: inline-block;
+    color: white;
+
+}
+
+nav ul {
+    margin-left: auto;
+
+}
+nav img{
+    max-width: 8%;
+
+}
