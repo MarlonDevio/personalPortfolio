@@ -25,6 +25,7 @@ DARK BLUE ACCENTS
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 /*Set font in body -- make use of inheritance -- all child elements get this font
@@ -35,9 +36,8 @@ body {
     font-size: 16px;
     line-height: 1.7; /* 1.7 times bigger then normal*/
     color: #777;
-
+    padding: 30px;
 }
-
 
 h1 {
     font-family: 'Orbitron', sans-serif;
@@ -45,12 +45,146 @@ h1 {
     font-weight: 700;
 }
 
-
 /**************************************HERO*****************************************/
 .header {
     /*Little bit smaller then the whole vh*/
     height: 95vh;
-    background-image: linear-gradient() ,url("../images/background-image.jpg");
+    /*create 2 background images */
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(87, 220, 205, 0.8),
+            rgba(0, 32, 37, 0.8) /* Rgba, last parameter creates the opacity  */
+            ),
+            url("../images/background-image-2.jpg");
     background-size: cover; /* cover entire viewport - 5% of the vh*/
-    background-position: top; /* make sure that top of this image always stays at the top (responsive) */
+    background-position: bottom; /* make sure that top of this image always stays at the top (responsive) */
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*Specify polygon to which the element is still visible (clockwise)*/
+/*    xy xy xy xy */
+
+    position: relative;
 }
+
+.logo-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo {
+    height: 150px;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%; /* in relation to parent*/
+    left: 50%;
+    transform: translate(-50%, -50%); /* shifted to element height and top */
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    /*! Determines if the back part of an element is visible when we move the element*/
+    /*This is for the element not to be shaky*/
+    backface-visibility: hidden;
+
+}
+.heading-primary-main {
+    display: block;
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    /***********************************/
+    /*! examples
+    ! animation-delay: ;
+    ! animation-iteration-count: ;
+    ! animation-timing-function: ;
+    https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+    ! */
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block; /* makes the element as if it was a block element (can change height) */
+    border-radius: 100px;
+    transition: all .2s;
+
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+/*This makes sure that you get te click effect*/
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #2d6f68;
+}
+
+
+
+/*[[ KEYFRAMES
+Creating Animations*/
+
+@keyframes moveInLeft {  /* can be every name you want*/
+    /*Start of animation*/
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    /*Animation at 80 %*/
+    80% {
+        transform: translateX(10px);
+    }
+    /*end of animation*/
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+       opacity: 0;
+        transform: translateX(100px);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+

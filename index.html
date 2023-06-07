@@ -9,15 +9,32 @@
 		<!--		Google Fonts-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&family=Orbitron:wght@700&display=swap"
+		      rel="stylesheet">
 
 		<!--		CSS file-->
 		<link rel="stylesheet" href="./css/style.css">
 		<title>Marlon</title>
 </head>
 <body>
+
 <!--****************HERO SECTION****************-->
-<header class="header"></header>
+<header class="header">
+		<!--		Img is inline element. Best practice => put img in div container, and then position the div-->
+		<div class="logo-box">
+				<img src="./images/logo_transparent.png" alt="logo" class="logo">
+		</div>
+
+		<div class="text-box">
+				<h1 class="heading-primary">
+						<span class="heading-primary-main">Marlon</span>
+						<span class="heading-primary-sub">Your Business Vision<br> My Fullstack Mission</span>
+				</h1>
+
+			<!--BUTTON-->
+				<a href="#" class="btn btn-white">Launch Vision</a>
+		</div>
+</header>
 <script src="./index.js"></script>
 </body>
 </html>
