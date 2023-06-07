@@ -1,0 +1,56 @@
+/********************************COLORS
+Background: 000000 (black)
+
+BLUE Accents
+#daf6f3
+#afeee6
+#57dccd
+#52d1c3
+#47b2a6
+#2d6f68
+
+DARK BLUE ACCENTS
+#c0d0d2
+#7b9fa4
+#003942
+#002025
+********************************************/
+
+/*****VARIABLES*****/
+:root {
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Set font in body -- make use of inheritance -- all child elements get this font
+Project wide font settings */
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7; /* 1.7 times bigger then normal*/
+    color: #777;
+
+}
+
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+
+/**************************************HERO*****************************************/
+.header {
+    /*Little bit smaller then the whole vh*/
+    height: 95vh;
+    background-image: linear-gradient() ,url("../images/background-image.jpg");
+    background-size: cover; /* cover entire viewport - 5% of the vh*/
+    background-position: top; /* make sure that top of this image always stays at the top (responsive) */
+}
