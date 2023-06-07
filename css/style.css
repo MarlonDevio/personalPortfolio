@@ -3,11 +3,11 @@ Background: 000000 (black)
 
 BLUE Accents
 #daf6f3
+#2d6f68
 #afeee6
 #57dccd
 #52d1c3
 #47b2a6
-#2d6f68
 
 DARK BLUE ACCENTS
 #c0d0d2
@@ -65,7 +65,7 @@ h1 {
             rgba(87, 220, 205, 0.8),
             rgba(0, 32, 37, 0.8) /* Rgba, last parameter creates the opacity  */
             ),
-            url("../images/background-image-2.jpg");
+            url("../images/background-image.jpg");
     background-size: cover; /* cover entire viewport - 5% of the vh*/
     background-position: bottom; /* make sure that top of this image always stays at the top (responsive) */
 
@@ -148,6 +148,7 @@ h1 {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+/*   transition: all 1s ease-out */
 }
 
 .heading-primary-sub {
@@ -177,7 +178,6 @@ h1 {
     border-radius: 100px;
     transition: all .2s;
     position: relative;
-
 }
 
 .btn:hover {
@@ -210,7 +210,7 @@ h1 {
     top: 0;
     left: 0;
     z-index: -1;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 .btn-white::after {
