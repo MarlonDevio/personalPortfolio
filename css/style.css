@@ -75,6 +75,7 @@ h1 {
 .nav-items {
     display: flex;
     gap: 3em;
+    flex-wrap: wrap;
 }
 
 .nav-item {
