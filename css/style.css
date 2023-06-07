@@ -128,6 +128,7 @@ h1 {
     display: inline-block; /* makes the element as if it was a block element (can change height) */
     border-radius: 100px;
     transition: all .2s;
+    position: relative;
 
 }
 
@@ -145,9 +146,33 @@ h1 {
 .btn-white{
     background-color: #fff;
     color: #2d6f68;
+
 }
 
+.btn::after {
+/*    ! virtual element right after the element that we select (great for effects)
+! Create btn that looks like this button, we put it behind the button and we leave the button, the pseudo element goes back */
+    content: "";
+    display: inline-block;
+    height: 100%; /* height of the btn*/
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+}
 
+.btn-white::after {
+    background-color: rgba(87, 220, 205, .8);
+}
+
+.btn:hover::after {
+    /*increase element*/
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
 
 /*[[ KEYFRAMES
 Creating Animations*/
