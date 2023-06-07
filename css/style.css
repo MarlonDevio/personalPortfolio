@@ -17,6 +17,8 @@ DARK BLUE ACCENTS
 ********************************************/
 
 /*****VARIABLES*****/
+
+
 :root {
 
 }
@@ -42,6 +44,15 @@ h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 4rem;
     font-weight: 700;
+}
+
+/******* ALLROUND CLASSES FOR JS *********/
+.active {
+    opacity: 1;
+}
+
+.non-active {
+    opacity: 0.5;
 }
 
 /**************************************HERO*****************************************/
