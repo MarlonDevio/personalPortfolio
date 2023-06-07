@@ -25,7 +25,6 @@ DARK BLUE ACCENTS
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 /*Set font in body -- make use of inheritance -- all child elements get this font
@@ -253,7 +252,6 @@ Creating Animations*/
     100% {
         opacity: 1;
     }
-
 }
 
 @keyframes moveInBottom {
