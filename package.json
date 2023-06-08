@@ -1,0 +1,11 @@
+{
+  "name": "portfoliowebsite",
+  "version": "1.0.0",
+  "description": "Portfolio website for webdevelopers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marlon Hamaekers",
+  "license": "ISC"
+}
