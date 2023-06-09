@@ -1,0 +1,280 @@
+/********************************COLORS
+Background: 000000 (black)
+
+BLUE Accents
+#daf6f3
+#2d6f68
+#afeee6
+#57dccd
+#52d1c3
+#47b2a6
+
+DARK BLUE ACCENTS
+#c0d0d2
+#7b9fa4
+#003942
+#002025
+********************************************/
+
+/*****VARIABLES*****/
+
+
+:root {
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Set font in body -- make use of inheritance -- all child elements get this font
+Project wide font settings */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7; /* 1.7 times bigger then normal*/
+  color: #777;
+  padding: 30px;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+/******* ALLROUND CLASSES FOR JS *********/
+.active {
+  opacity: 1;
+}
+
+.non-active {
+  opacity: 0.5;
+}
+
+/**************************************HERO*****************************************/
+.header {
+  /*Little bit smaller then the whole vh*/
+  height: 95vh;
+  /*create 2 background images */
+  background-image: linear-gradient(
+                  to right,
+                  rgba(87, 220, 205, 0.8),
+                  rgba(0, 32, 37, 0.8) /* Rgba, last parameter creates the opacity  */
+  ),
+  url("../images/background-image.jpg");
+  background-size: cover; /* cover entire viewport - 5% of the vh*/
+  background-position: bottom; /* make sure that top of this image always stays at the top (responsive) */
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*Specify polygon to which the element is still visible (clockwise)*/
+  /*    xy xy xy xy */
+
+  position: relative;
+}
+
+/*!************************************NAVBAR ***********************************************************************!*/
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 3em 5em;
+}
+
+.nav-items {
+  display: flex;
+  gap: 3em;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #afeee6;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.nav-item:hover::after{
+  width: 100%;
+}
+
+.logo-box {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.logo {
+  height: 150px;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%; /* in relation to parent*/
+  left: 50%;
+  transform: translate(-50%, -50%); /* shifted to element height and top */
+  text-align: center;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  /*! Determines if the back part of an element is visible when we move the element*/
+  /*This is for the element not to be shaky*/
+  backface-visibility: hidden;
+
+}
+.heading-primary-main {
+  display: block;
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /*   transition: all 1s ease-out */
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  /***********************************/
+  /*! examples
+  ! animation-delay: ;
+  ! animation-iteration-count: ;
+  ! animation-timing-function: ;
+  https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+  ! */
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block; /* makes the element as if it was a block element (can change height) */
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+/*This makes sure that you get te click effect*/
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white{
+  background-color: #fff;
+  color: #2d6f68;
+
+
+}
+
+.btn::after {
+  /*    ! virtual element right after the element that we select (great for effects)
+  ! Create btn that looks like this button, we put it behind the button and we leave the button, the pseudo element goes back */
+  content: "";
+  display: inline-block;
+  height: 100%; /* height of the btn*/
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.btn-white::after {
+  background-color: rgba(87, 220, 205, .8);
+
+}
+
+.btn:hover::after {
+  /*increase element*/
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+/*[[ KEYFRAMES
+Creating Animations*/
+
+@keyframes moveInLeft {  /* can be every name you want*/
+  /*Start of animation*/
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  /*Animation at 80 %*/
+  80% {
+    transform: translateX(10px);
+  }
+  /*end of animation*/
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
