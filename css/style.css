@@ -69,13 +69,13 @@ h1 {
     background-size: cover; /* cover entire viewport - 5% of the vh*/
     background-position: bottom; /* make sure that top of this image always stays at the top (responsive) */
 
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*Specify polygon to which the element is still visible (clockwise)*/
+   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*Specify polygon to which the element is still visible (clockwise)*/
 /*    xy xy xy xy */
 
     position: relative;
 }
 
-/*!**************** NAVBAR *******************!*/
+/*!************************************NAVBAR ***********************************************************************!*/
 .nav-container {
     display: flex;
     justify-content: flex-end;
