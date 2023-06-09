@@ -67,24 +67,36 @@ h1 {
   opacity: 0.5;
 }
 
-/**************************************HERO*****************************************/
-.header {
-  /*Little bit smaller then the whole vh*/
-  height: 95vh;
-  /*create 2 background images */
+/**************************************************************************HERO*****************************************************************************************/
+.header { /*Little bit smaller then the whole vh*/
+  height: 95vh; /*create 2 background images */
   background-image: linear-gradient(
                   to right,
                   rgba($color-primary, 0.8),
-                  rgba($color-primary-dark, 0.8) /* Rgba, last parameter creates the opacity  */
-  ),
+                  rgba($color-primary-dark, 0.8)),/* Rgba, last parameter creates the opacity  */
   url("../images/background-image.jpg");
   background-size: cover; /* cover entire viewport - 5% of the vh*/
   background-position: bottom; /* make sure that top of this image always stays at the top (responsive) */
-
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*Specify polygon to which the element is still visible (clockwise)*/
-  /*    xy xy xy xy */
-
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*Specify polygon to which the element is still visible (clockwise)*//*    xy xy xy xy */
   position: relative;
+
+  & .logo-box {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+
+  & .logo {
+    height: 8rem;
+  }
+
+  & .text-box {
+    position: absolute;
+    top: 50%; /* in relation to parent*/
+    left: 50%;
+    transform: translate(-50%, -50%); /* shifted to element height and top */
+    text-align: center;
+  }
 }
 
 /*!************************************NAVBAR ***********************************************************************!*/
@@ -125,23 +137,10 @@ h1 {
   width: 100%;
 }
 
-.logo-box {
-  position: absolute;
-  top: 0;
-  left: 20px;
-}
 
-.logo {
-  height: 150px;
-}
 
-.text-box {
-  position: absolute;
-  top: 50%; /* in relation to parent*/
-  left: 50%;
-  transform: translate(-50%, -50%); /* shifted to element height and top */
-  text-align: center;
-}
+
+
 
 .heading-primary {
   color: $color-white;
