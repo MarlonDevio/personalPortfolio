@@ -1,9 +1,9 @@
 {
-<<<<<<< HEAD
+
   "dependencies": {
     "node-sass": "^9.0.0"
-  }
-=======
+  },
+
   "name": "portfoliowebsite",
   "version": "1.0.0",
   "description": "Portfolio website for webdevelopers",
@@ -13,5 +13,4 @@
   },
   "author": "Marlon Hamaekers",
   "license": "ISC"
->>>>>>> origin/main
 }
