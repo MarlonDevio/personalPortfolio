@@ -1,9 +1,4 @@
 {
-
-  "dependencies": {
-    "node-sass": "^9.0.0"
-  },
-
   "name": "portfoliowebsite",
   "version": "1.0.0",
   "description": "Portfolio website for webdevelopers",
@@ -12,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Marlon Hamaekers",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
 }
