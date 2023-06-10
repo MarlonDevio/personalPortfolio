@@ -172,15 +172,36 @@ h1 {
     animation-fill-mode: backwards; }
 
 .card {
-  perspective: 150rem; }
+  display: grid;
+  perspective: 150rem;
+  padding: 5rem 8rem;
+  text-align: center; }
   .card__side {
-    background-color: orangered;
-    height: 50rem;
+    height: 60rem;
     color: #ffffff;
     font-size: 2rem;
-    transition: all .8s; }
-  .card:hover .card__side {
+    transition: all 1s ease;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    backface-visibility: hidden;
+    max-width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      background-color: blue;
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #fbce78, #F1A208); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #c0b3e1, #5b3f9f); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #f17988, #da172f); }
+  .card:hover .card__side--front {
     transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
 
 /* The .header class defines the header section of the page. It covers 95% of the viewport's height and includes a gradient and background image. */
 .header {
@@ -245,10 +266,8 @@ h1 {
 
 .grid-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 10rem;
-  justify-items: center;
-  padding: 0 20rem; }
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  justify-items: stretch; }
 
 .section-services {
   background: #e6e9e9;
