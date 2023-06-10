@@ -1,0 +1,18 @@
+.card {
+  perspective: 150rem;
+
+
+  &__side{
+    background-color: orangered;
+    height: 50rem;
+    color: #ffffff;
+    font-size: 2rem;
+    transition: all .8s;
+  }
+
+  &:hover &__side {
+  transform: rotateY(180deg);
+  }
+}
+
+//.card:hover .card__side {}

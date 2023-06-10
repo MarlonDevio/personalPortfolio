@@ -171,6 +171,17 @@ h1 {
     /* The animation-fill-mode property is set to 'backwards', which will apply the initial keyframe values as soon as the animation is applied. */
     animation-fill-mode: backwards; }
 
+.card {
+  perspective: 150rem; }
+  .card__side {
+    background-color: orangered;
+    height: 50rem;
+    color: #ffffff;
+    font-size: 2rem;
+    transition: all .8s; }
+  .card:hover .card__side {
+    transform: rotateY(180deg); }
+
 /* The .header class defines the header section of the page. It covers 95% of the viewport's height and includes a gradient and background image. */
 .header {
   height: 95vh;
@@ -231,3 +242,15 @@ h1 {
     /* The translate transform shifts the position of the element by a percentage of its own size, effectively centering it. */
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 10rem;
+  justify-items: center;
+  padding: 0 20rem; }
+
+.section-services {
+  background: #e6e9e9;
+  padding: 25rem 0 50rem 0;
+  margin-top: -20rem; }

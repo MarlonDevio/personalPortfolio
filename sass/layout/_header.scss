@@ -12,6 +12,7 @@
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 
+
   /* .header__nav-container defines the style for the navigation container. It uses flexbox for layout, aligning items to the end of the main axis and center of the cross axis. */
   &__nav-container{
     display: flex;
