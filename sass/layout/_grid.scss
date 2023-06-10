@@ -1,6 +1,6 @@
 .grid-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(40rem, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
   justify-items:stretch;
 
 

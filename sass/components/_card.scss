@@ -1,13 +1,14 @@
 .card {
+  // FUNCTIONALITY
   display: grid; // The card is displayed as a grid for flexible layout
   perspective: 150rem; // Defines the perspective view for a 3D transform on the card
-  padding: 5rem 8rem;
+  padding: 5rem 6rem;
   text-align: center;
 
 
   &__side { // This is the side of the card
     height: 60rem; // Defines the height of the card side
-    color: #ffffff; // Sets the text color of the card side
+    color: $color-black; // Sets the text color of the card side
     font-size: 2rem; // Sets the font size of the text on the card side
     transition: all 1s ease; //ease will make the flow more relax // Applies transition effects to all properties for a duration of 0.8 seconds
 
@@ -18,15 +19,14 @@
     backface-visibility: hidden; // Hides the back of the card side, now the image is clear
     max-width: 100%;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    box-shadow: $box-shadow;
 
 
-    &--front { // This is the front side of the card
+    &--front { // This is the front side of the card.
       background-color: $color-white; // Sets the background color of the front side of the card
     }
 
     &--back { // This is the back side of the card
-      background-color: blue; // Sets the background color of the back side of the card
       transform: rotateY(180deg); // Rotates the back side of the card 180 degrees along the Y-axis
 
       &-1 {
@@ -43,10 +43,29 @@
   }
 
   &:hover &__side--front { // Applies the styles on hover over the front side of the card
-    transform: rotateY(180deg); // On hover, the front side of the card rotates 180 degrees along the Y-axis
+    transform: rotateY(-180deg); // On hover, the front side of the card rotates 180 degrees along the Y-axis
   }
 
   &:hover &__side--back { // Applies the styles on hover over the back side of the card
     transform: rotateY(0); // On hover, the back side of the card rotates back to its original position
   }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 24rem;
+    display: inline-block;
+
+
+
+    &--1 {
+      background-image: url(../images/background-image-2.jpg);
+
+    }
+  }
+}
+
+.card__container {
+  display: flex;
+  flex-direction: column;
 }
