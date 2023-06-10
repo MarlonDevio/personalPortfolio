@@ -9,7 +9,6 @@ BLUE Accents
 #52d1c3
 #47b2a6
 
-
 Cool gray: #888DA7 #6B717E
 171, 193, 190
 
@@ -19,8 +18,8 @@ DARK BLUE ACCENTS
 #003942
 #002025
 !*******************************************/
-/*************************************************************************
-*************************VARIABLES************************************************************/
+/***********************************************************************************************************************
+*************************VARIABLES*************************************************************************************/
 *,
 *::after,
 *::before {
@@ -51,7 +50,8 @@ h1 {
 .non-active {
   opacity: 0.5; }
 
-/**************************************************************************HERO*****************************************************************************************/
+/*! ****************************************************HEADER**************************************/
+/*! ****************************************************HEADER**************************************/
 .header {
   /*Little bit smaller then the whole vh*/
   height: 95vh;
@@ -65,13 +65,40 @@ h1 {
   /*Specify polygon to which the element is still visible (clockwise)*/
   /*    xy xy xy xy */
   position: relative; }
-  .header .logo-box {
+  .header__nav-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3em 5em; }
+  .header__logo-box {
     position: absolute;
     top: 2rem;
     left: 2rem; }
-  .header .logo {
+  .header__logo {
     height: 8rem; }
-  .header .text-box {
+  .header__nav-container__nav-items {
+    display: flex;
+    gap: 3em;
+    flex-wrap: wrap; }
+    .header__nav-container__nav-items .nav-item {
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #fff;
+      position: relative; }
+      .header__nav-container__nav-items .nav-item::after {
+        content: "";
+        height: 3px;
+        width: 0;
+        background: #afeee6;
+        border-radius: 3px;
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        transition: all 0.5s; }
+      .header__nav-container__nav-items .nav-item:hover::after {
+        width: 100%; }
+  .header__text-box {
     position: absolute;
     top: 50%;
     /* in relation to parent*/
@@ -80,72 +107,33 @@ h1 {
     /* shifted to element height and top */
     text-align: center; }
 
-/*!************************************NAVBAR ***********************************************************************!*/
-.nav-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 3em 5em; }
-
-.nav-items {
-  display: flex;
-  gap: 3em;
-  flex-wrap: wrap; }
-
-.nav-item {
-  text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #fff;
-  position: relative; }
-
-.nav-item::after {
-  content: "";
-  height: 3px;
-  width: 0;
-  background: #afeee6;
-  border-radius: 3px;
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  transition: all 0.5s; }
-
-.nav-item:hover::after {
-  width: 100%; }
-
+/*! ***********************************HEADING PRIMARY**********************************************************************/
+/*! ***********************************HEADING PRIMARY**********************************************************************/
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 60px;
-  /*! Determines if the back part of an element is visible when we move the element*/
-  /*This is for the element not to be shaky*/
-  backface-visibility: hidden; }
-
-.heading-primary-main {
-  display: block;
-  font-size: 70px;
-  font-weight: 700;
-  letter-spacing: 35px;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /*   transition: all 1s ease-out */ }
-
-.heading-primary-sub {
-  display: block;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 17.4px;
-  animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /***********************************/
-  /*! examples
-  ! animation-delay: ;
-  ! animation-iteration-count: ;
-  ! animation-timing-function: ;
+  backface-visibility: hidden;
+  /*examples
+  animation-delay: ;
+  animation-iteration-count: ;
+  animation-timing-function: ;
   https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
-  ! */ }
+  */ }
+  .heading-primary--main {
+    display: block;
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation: moveInRight 1s ease-out; }
 
 .btn:link,
 .btn:visited {
@@ -167,7 +155,7 @@ h1 {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #002025; }
 
@@ -186,7 +174,7 @@ h1 {
   z-index: -1;
   transition: all 0.5s; }
 
-.btn-white::after {
+.btn--white::after {
   background-color: rgba(87, 220, 205, 0.8); }
 
 .btn:hover::after {
@@ -194,7 +182,7 @@ h1 {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0; }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
 

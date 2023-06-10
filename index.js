@@ -1,7 +1,7 @@
 "use strict";
 
 /****** VARIABLES NAVBAR *******/
-const navbarContainer = document.querySelector(".nav-container");
+const navbarContainer = document.querySelector(".header__nav-container");
 const navItems = document.querySelectorAll(".nav-item");
 
 
