@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //This defines what 1rem is
+  font-size: 62.5%;
+}
+
+/*Set font in body -- make use of inheritance -- all child elements get this font
+Project wide font settings */
+body{
+  box-sizing: border-box;
+}
+
+
+
+/******* ALLROUND CLASSES FOR JS *********/
+.active {
+  opacity: 1;
+}
+
+.non-active {
+  opacity: 0.5;
+}

@@ -1,0 +1,79 @@
+/* The .btn class and its variants define the style for the button on the page. */
+
+.btn {
+  /* &:link and &:visited pseudo-classes style the button in its normal state and when the linked button has been visited, respectively. */
+  &:link,
+  &:visited {
+    /* The button text is transformed to uppercase. */
+    text-transform: uppercase;
+    /* Text decoration is removed to discard the default underline provided by the browser for links. */
+    text-decoration: none;
+    /* Padding is added to size the button. */
+    padding: 1.5rem 4rem;
+    /* The button is displayed as an inline block, which allows it to have block properties but still stay in the flow of text. */
+    display: inline-block;
+    /* A border radius is added for a pill-like button. */
+    border-radius: 10rem;
+    /* A transition is added to all properties for smooth animation effects when state changes occur. */
+    transition: all .2s;
+    /* Relative positioning is set to create a new context for absolutely positioned pseudo-elements. */
+    position: relative;
+  }
+
+  /* The &:hover pseudo-class styles the button when it is being hovered. */
+  &:hover {
+    /* The button moves up slightly when hovered. */
+    transform: translateY(-3px);
+    /* A box shadow is added to give the effect of the button being lifted. */
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+
+    /* The ::after pseudo-element is scaled up and made transparent when the button is hovered. */
+    &::after{
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  /* The &:active pseudo-class styles the button when it is being clicked. */
+  &:active{
+    /* The button moves down slightly when clicked to give the effect of being pressed. */
+    transform: translateY(-1px);
+    /* A smaller box shadow is applied when the button is clicked. */
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+  }
+
+  /* The ::after pseudo-element creates a virtual element behind the button, useful for creating certain effects. */
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%; /* height of the button */
+    width: 100%; /* width of the button */
+    border-radius: 10rem; /* border radius to match the button's border radius */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* The pseudo-element is positioned behind the button using a negative z-index. */
+    z-index: -1;
+    /* A transition is added for smooth animation effects. */
+    transition: all 0.5s;
+  }
+
+  /* The .btn--white variant has a white background and a primary color text. */
+  &--white {
+    background-color: #fff;
+    color: $color-primary-dark;
+    /* The ::after pseudo-element has a slightly transparent primary color background. */
+    &::after {
+      background-color: rgba($color-primary,.8);
+    }
+  }
+
+  /* The .btn--animated variant is animated on page load. */
+  &--animated {
+    /* The animation property is set to move the button from the bottom of the page, take 0.5 seconds, start after a delay of 0.75 seconds, and ease out. */
+    animation: moveInBottom .5s ease-out .75s;
+    /* The animation-fill-mode property is set to 'backwards', which will apply the initial keyframe values as soon as the animation is applied. */
+    animation-fill-mode: backwards;
+  }
+}
+

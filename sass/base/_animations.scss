@@ -1,0 +1,48 @@
+@keyframes moveInLeft {  /* can be every name you want*/
+  /*Start of animation*/
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  /*Animation at 80 %*/
+  80% {
+    transform: translateX(1rem);
+  }
+  /*end of animation*/
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0) ;
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

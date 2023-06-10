@@ -1,0 +1,76 @@
+/* The .header class defines the header section of the page. It covers 95% of the viewport's height and includes a gradient and background image. */
+
+.header {
+  height: 95vh;
+  /* Two background images are set: a linear gradient and an image from a URL. The gradient's opacity is set using rgba. */
+  background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8)), url("../images/background-image.jpg");
+  /* The background image will cover the entire viewport, minus 5% of its height. */
+  background-size: cover;
+  /* The top of the image is set to always stay at the top, improving responsiveness. */
+  background-position: bottom;
+  /* A polygon clipping path is specified to define the visible portion of the element. */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+
+  /* .header__nav-container defines the style for the navigation container. It uses flexbox for layout, aligning items to the end of the main axis and center of the cross axis. */
+  &__nav-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3em 5em;
+  }
+
+  /* .header__logo-box and .header__logo define the styles for the logo container and the logo respectively. They're positioned absolutely within the header section. */
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+  &__logo {
+    height: 8rem;
+  }
+
+  /* .header__nav-container__nav-items and its child .nav-item define the styles for the navigation items. */
+  &__nav-container__nav-items {
+    display: flex;
+    gap: 3em;
+    flex-wrap: wrap;
+
+    /* .nav-item defines individual navigation links. On hover, a bottom border expands to fill the width of the link. */
+    & .nav-item{
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: $color-white;
+      position: relative;
+
+      /* ::after pseudoelement is used to create a dynamic bottom border on hover. */
+      &::after {
+        content: "";
+        height: 3px;
+        width: 0;
+        background: $color-primary-light;
+        border-radius: 3px;
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        transition: all 0.5s;
+      }
+
+      /* On hover, the width of the ::after pseudoelement (bottom border) expands to 100%. */
+      &:hover::after{
+        width: 100%;
+      }
+    }
+  }
+
+  /* .header__text-box positions a text box in the center of the header section. */
+  &__text-box {
+    position: absolute;
+    top: 50%; /* relative to the parent element */
+    left: 50%;
+    /* The translate transform shifts the position of the element by a percentage of its own size, effectively centering it. */
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
