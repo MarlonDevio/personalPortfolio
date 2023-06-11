@@ -3,32 +3,36 @@
   display: grid; // The card is displayed as a grid for flexible layout
   perspective: 150rem; // Defines the perspective view for a 3D transform on the card
   padding: 5rem 0;
-  text-align: center;
-  width: 35rem;
-
-  &__container {
-      display: flex;
-      flex-direction: column;
-    }
 
 
 
-  &__side { // This is the side of the card
-    height: 55rem; // Defines the height of the card side
-    color: $color-black; // Sets the text color of the card side
-    font-size: 2rem; // Sets the font size of the text on the card side
-    transition: all 1s ease; //ease will make the flow more relax // Applies transition effects to all properties for a duration of 0.8 seconds
-
-    //  making the front and the back place on top of each other
+  &__heading-secondary {
     grid-column: 1/2; // Sets the card side's position on the grid column
     grid-row: 1/2; // Sets the card side's position on the grid row
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  &__side { // This is the side of the card we need a side, to use the perspective
+    height: 55rem; // Defines the height of the card side
+    color: $color-black; // Sets the text color of the card side
+
+    transition: all 1s ease; //ease will make the flow more relax // Applies transition effects to all properties for a duration of 0.8 seconds
+    width: 35rem;
+    //  making the front and the back place on top of each other
+    grid-column: 1/2; // Sets the card side's position on the grid column
+    grid-row: 2/3; // Sets the card side's position on the grid row
 
     backface-visibility: hidden; // Hides the back of the card side, now the image is clear
     max-width: 100%;
     border-radius: 3px;
     overflow: hidden; // makes sure that the corners of images stay round, because the background image is overflowing the parent
     box-shadow: $box-shadow;
-
+    position: relative;
 
 
     &--front { // This is the front side of the card.
@@ -41,9 +45,11 @@
       &-1 {
         background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
       }
+
       &-2 {
         background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
       }
+
       &-3 {
         background-image: linear-gradient(to right bottom, $color-fourth-light, $color-fourth-dark);
 
@@ -75,7 +81,7 @@
     }
 
     &--2 {
-      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../images/ui-ux.jpg) ;
+      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../images/ui-ux.jpg);
     }
 
     &--3 {
@@ -83,5 +89,64 @@
     }
   }
 
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 70%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.4rem;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+                      to right bottom,
+                      rgba($color-secondary-light, .90),
+                      rgba($color-secondary-dark, .90)
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+                      to right bottom,
+                      rgba($color-tertiary-light, .90),
+                      rgba($color-tertiary-dark, .90)
+      );
+    }
+    &--3 {
+      background-image: linear-gradient(
+                      to right bottom,
+                      rgba($color-fourth-light, .90),
+                      rgba($color-fourth-dark, .90)
+      );
+    }
+  }
+
+  &__details {
+    & ul {
+        list-style: none;
+        width: 85%;
+        margin: 0 auto;
+        padding-top: 2rem;
+
+       & li {
+         padding: 1rem;
+         text-align: center;
+         font-size: 1.5rem;
+
+         &:not(:last-child) { //every li except the lasat child
+           border-bottom: 1px solid #eee;
+         }
+       }
+    }
+
+  }
 }
 

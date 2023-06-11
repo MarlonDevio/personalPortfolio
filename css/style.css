@@ -70,6 +70,14 @@ h1 {
   font-size: 4rem;
   font-weight: 700; }
 
+h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #112c29;
+  text-transform: uppercase; }
+
 /* The .heading-primary class defines the primary heading styles for the page, including color, transformation, and margin. */
 .heading-primary {
   /* The color of the text is set using the variable $color-white. */
@@ -174,30 +182,32 @@ h1 {
 .card {
   display: grid;
   perspective: 150rem;
-  padding: 5rem 0;
-  text-align: center;
-  width: 35rem; }
+  padding: 5rem 0; }
+  .services__heading-primary {
+    grid-column: 1/2;
+    grid-row: 1/2; }
   .card__container {
     display: flex;
     flex-direction: column; }
   .card__side {
     height: 55rem;
     color: #000000;
-    font-size: 2rem;
     transition: all 1s ease;
+    width: 35rem;
     grid-column: 1/2;
-    grid-row: 1/2;
+    grid-row: 2/3;
     backface-visibility: hidden;
     max-width: 100%;
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    position: relative; }
     .card__side--front {
       background-color: #fff; }
     .card__side--back {
       transform: rotateY(180deg); }
       .card__side--back-1 {
-        background-image: linear-gradient(to right bottom, #fbce78, #F1A208); }
+        background-image: linear-gradient(to right bottom, #4ec6b9, #112c29); }
       .card__side--back-2 {
         background-image: linear-gradient(to right bottom, #c0b3e1, #5b3f9f); }
       .card__side--back-3 {
@@ -213,11 +223,41 @@ h1 {
     background-blend-mode: screen;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #fbce78, #F1A208), url(../images/web-app-dev.png); }
+      background-image: linear-gradient(to right bottom, #4ec6b9, #112c29), url(../images/web-app-dev.png); }
     .card__picture--2 {
       background-image: linear-gradient(to right bottom, #c0b3e1, #5b3f9f), url(../images/ui-ux.jpg); }
     .card__picture--3 {
       background-image: linear-gradient(to right bottom, #f17988, #da172f), url(../images/motivational-guidance.png); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 70%; }
+  .card__heading-span {
+    padding: 1rem 1.4rem;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(78, 198, 185, 0.9), rgba(17, 44, 41, 0.9)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(192, 179, 225, 0.9), rgba(91, 63, 159, 0.9)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(241, 121, 136, 0.9), rgba(218, 23, 47, 0.9)); }
+  .card__details ul {
+    list-style: none;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 2rem; }
+    .card__details ul li {
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem; }
+      .card__details ul li:not(:last-child) {
+        border-bottom: 1px solid #eee; }
 
 /* The .header class defines the header section of the page. It covers 95% of the viewport's height and includes a gradient and background image. */
 .header {
