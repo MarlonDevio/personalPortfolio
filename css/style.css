@@ -182,8 +182,9 @@ h2 {
 .card {
   display: grid;
   perspective: 150rem;
-  padding: 5rem 0; }
-  .services__heading-primary {
+  padding: 5rem 0;
+  height: 55rem; }
+  .card__heading-secondary {
     grid-column: 1/2;
     grid-row: 1/2; }
   .card__container {
@@ -234,7 +235,7 @@ h2 {
     text-transform: uppercase;
     color: #fff;
     position: absolute;
-    top: 12rem;
+    top: 14rem;
     right: 2rem;
     text-align: right;
     width: 70%; }
@@ -242,20 +243,20 @@ h2 {
     padding: 1rem 1.4rem;
     box-decoration-break: clone; }
     .card__heading-span--1 {
-      background-image: linear-gradient(to right bottom, rgba(78, 198, 185, 0.9), rgba(17, 44, 41, 0.9)); }
+      background-image: linear-gradient(to right bottom, rgba(78, 198, 185, 0.85), rgba(17, 44, 41, 0.85)); }
     .card__heading-span--2 {
-      background-image: linear-gradient(to right bottom, rgba(192, 179, 225, 0.9), rgba(91, 63, 159, 0.9)); }
+      background-image: linear-gradient(to right bottom, rgba(192, 179, 225, 0.85), rgba(91, 63, 159, 0.85)); }
     .card__heading-span--3 {
-      background-image: linear-gradient(to right bottom, rgba(241, 121, 136, 0.9), rgba(218, 23, 47, 0.9)); }
+      background-image: linear-gradient(to right bottom, rgba(241, 121, 136, 0.85), rgba(218, 23, 47, 0.85)); }
   .card__details ul {
     list-style: none;
-    width: 85%;
+    width: 70%;
     margin: 0 auto;
-    padding-top: 2rem; }
+    padding: 3rem 0; }
     .card__details ul li {
       padding: 1rem;
       text-align: center;
-      font-size: 1.5rem; }
+      font-size: 1.4rem; }
       .card__details ul li:not(:last-child) {
         border-bottom: 1px solid #eee; }
 
@@ -293,7 +294,7 @@ h2 {
     /* .nav-item defines individual navigation links. On hover, a bottom border expands to fill the width of the link. */ }
     .header__nav-container__nav-items .nav-item {
       text-decoration: none;
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       font-weight: 500;
       color: #fff;
       position: relative;

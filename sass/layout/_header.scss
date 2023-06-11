@@ -19,6 +19,7 @@
     justify-content: flex-end;
     align-items: center;
     padding: 3em 5em;
+
   }
 
   /* .header__logo-box and .header__logo define the styles for the logo container and the logo respectively. They're positioned absolutely within the header section. */
@@ -37,13 +38,15 @@
     gap: 3em;
     flex-wrap: wrap;
 
+
     /* .nav-item defines individual navigation links. On hover, a bottom border expands to fill the width of the link. */
     & .nav-item{
       text-decoration: none;
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       font-weight: 500;
       color: $color-white;
       position: relative;
+
 
       /* ::after pseudoelement is used to create a dynamic bottom border on hover. */
       &::after {

@@ -3,6 +3,9 @@
   display: grid; // The card is displayed as a grid for flexible layout
   perspective: 150rem; // Defines the perspective view for a 3D transform on the card
   padding: 5rem 0;
+  height: 55rem;
+
+  // put height on .card and on the side, so the height applies to both sides and the entire card
 
 
 
@@ -95,7 +98,7 @@
     text-transform: uppercase;
     color: $color-white;
     position: absolute;
-    top: 12rem;
+    top: 14rem;
     right: 2rem;
     text-align: right;
     width: 70%;
@@ -108,23 +111,23 @@
     &--1 {
       background-image: linear-gradient(
                       to right bottom,
-                      rgba($color-secondary-light, .90),
-                      rgba($color-secondary-dark, .90)
+                      rgba($color-secondary-light, .85),
+                      rgba($color-secondary-dark, .85)
       );
     }
 
     &--2 {
       background-image: linear-gradient(
                       to right bottom,
-                      rgba($color-tertiary-light, .90),
-                      rgba($color-tertiary-dark, .90)
+                      rgba($color-tertiary-light, .85),
+                      rgba($color-tertiary-dark, .85)
       );
     }
     &--3 {
       background-image: linear-gradient(
                       to right bottom,
-                      rgba($color-fourth-light, .90),
-                      rgba($color-fourth-dark, .90)
+                      rgba($color-fourth-light, .85),
+                      rgba($color-fourth-dark, .85)
       );
     }
   }
@@ -132,14 +135,14 @@
   &__details {
     & ul {
         list-style: none;
-        width: 85%;
+        width: 70%;
         margin: 0 auto;
-        padding-top: 2rem;
+        padding: 3rem 0;
 
        & li {
          padding: 1rem;
          text-align: center;
-         font-size: 1.5rem;
+         font-size: 1.4rem;
 
          &:not(:last-child) { //every li except the lasat child
            border-bottom: 1px solid #eee;
