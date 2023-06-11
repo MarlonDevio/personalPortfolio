@@ -1,5 +1,15 @@
 .section-services {
   background: $color-gray-background;
-  padding: 25rem 0 50rem 0;
+  padding: 30rem 0 30rem 0;
   margin-top: -20rem;
+}
+
+.section-portfolio {
+  padding: 30rem 0;
+  position: relative;
+  background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8));
+  background-size: cover;
+  z-index: 100;
+
+
 }
