@@ -2,12 +2,19 @@
   // FUNCTIONALITY
   display: grid; // The card is displayed as a grid for flexible layout
   perspective: 150rem; // Defines the perspective view for a 3D transform on the card
-  padding: 5rem 6rem;
+  padding: 5rem 0;
   text-align: center;
+  width: 35rem;
+
+  &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
 
 
   &__side { // This is the side of the card
-    height: 60rem; // Defines the height of the card side
+    height: 55rem; // Defines the height of the card side
     color: $color-black; // Sets the text color of the card side
     font-size: 2rem; // Sets the font size of the text on the card side
     transition: all 1s ease; //ease will make the flow more relax // Applies transition effects to all properties for a duration of 0.8 seconds
@@ -19,7 +26,9 @@
     backface-visibility: hidden; // Hides the back of the card side, now the image is clear
     max-width: 100%;
     border-radius: 3px;
+    overflow: hidden; // makes sure that the corners of images stay round, because the background image is overflowing the parent
     box-shadow: $box-shadow;
+
 
 
     &--front { // This is the front side of the card.
@@ -53,19 +62,26 @@
   // FRONT SIDE STYLING
   &__picture {
     background-size: cover;
-    height: 24rem;
-    display: inline-block;
-
+    background-position: center;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
 
     &--1 {
-      background-image: url(../images/app/design.jpg);
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+      url(../images/web-app-dev.png);
 
     }
+
+    &--2 {
+      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../images/ui-ux.jpg) ;
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right bottom, $color-fourth-light, $color-fourth-dark), url(../images/motivational-guidance.png);
+    }
   }
+
 }
 
-.card__container {
-  display: flex;
-  flex-direction: column;
-}

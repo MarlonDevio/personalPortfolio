@@ -1,7 +1,7 @@
 .grid-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
-  justify-items:stretch;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 
 
 }

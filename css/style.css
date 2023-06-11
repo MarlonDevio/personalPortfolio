@@ -174,10 +174,14 @@ h1 {
 .card {
   display: grid;
   perspective: 150rem;
-  padding: 5rem 6rem;
-  text-align: center; }
+  padding: 5rem 0;
+  text-align: center;
+  width: 35rem; }
+  .card__container {
+    display: flex;
+    flex-direction: column; }
   .card__side {
-    height: 60rem;
+    height: 55rem;
     color: #000000;
     font-size: 2rem;
     transition: all 1s ease;
@@ -186,6 +190,7 @@ h1 {
     backface-visibility: hidden;
     max-width: 100%;
     border-radius: 3px;
+    overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--front {
       background-color: #fff; }
@@ -203,14 +208,16 @@ h1 {
     transform: rotateY(0); }
   .card__picture {
     background-size: cover;
-    height: 24rem;
-    display: inline-block; }
+    background-position: center;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__picture--1 {
-      background-image: url(../images/background-image-2.jpg); }
-
-.card__container {
-  display: flex;
-  flex-direction: column; }
+      background-image: linear-gradient(to right bottom, #fbce78, #F1A208), url(../images/web-app-dev.png); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #c0b3e1, #5b3f9f), url(../images/ui-ux.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #f17988, #da172f), url(../images/motivational-guidance.png); }
 
 /* The .header class defines the header section of the page. It covers 95% of the viewport's height and includes a gradient and background image. */
 .header {
@@ -274,9 +281,9 @@ h1 {
     text-align: center; }
 
 .grid-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-items: stretch; }
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
 
 .section-services {
   background: #e6e9e9;
