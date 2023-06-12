@@ -114,6 +114,21 @@ h2 {
     /* The animation property is used here in its shorthand form, specifying the name of the animation, its duration and its timing function all in one line. */
     animation: moveInRight 1s ease-out; }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  background-image: linear-gradient(to right, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8));
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.5s ease; }
+  .heading-secondary:hover {
+    transform: scale(1.05) translateY(-0.5rem);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden; }
+
 /* The .btn class and its variants define the style for the button on the page. */
 .btn {
   /* &:link and &:visited pseudo-classes style the button in its normal state and when the linked button has been visited, respectively. */
@@ -341,13 +356,18 @@ h2 {
   justify-content: space-evenly;
   flex-wrap: wrap; }
 
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
+
 .section-services {
-  background: #e6e9e9;
-  padding: 30rem 0 30rem 0;
-  margin-top: -20rem; }
+  background: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
 
 .section-portfolio {
-  padding: 30rem 0;
+  padding: 25rem 0;
   position: relative;
   background-image: linear-gradient(to right bottom, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8));
   background-size: cover;

@@ -64,3 +64,23 @@ h2 {
 
   /* Additional animation properties can be set, such as delay, iteration count, and timing function. For more details, refer to the Mozilla Developer Network documentation: https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function */
 }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .2rem;
+
+  //make the font color gradient
+  background-image: linear-gradient(to right, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8));
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: scale(1.05) translateY(-.5rem);
+    text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    backface-visibility: hidden;
+  }
+}

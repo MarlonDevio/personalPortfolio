@@ -1,11 +1,17 @@
+.section-about {
+  background-color: $color-gray-light;
+  padding: 25rem 0;
+  margin-top: -20vh;
+}
+
 .section-services {
-  background: $color-gray-background;
-  padding: 30rem 0 30rem 0;
-  margin-top: -20rem;
+  background: $color-gray-light;
+  padding: 25rem 0;
+  margin-top: -20vh;
 }
 
 .section-portfolio {
-  padding: 30rem 0;
+  padding: 25rem 0;
   position: relative;
   background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8));
   background-size: cover;
