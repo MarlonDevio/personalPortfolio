@@ -129,14 +129,28 @@ h2 {
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
     backface-visibility: hidden; }
 
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-6 {
+  margin-bottom: 6rem; }
+
+.u-margin-bottom-4 {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-2 {
+  margin-bottom: 2rem; }
+
 /* The .btn class and its variants define the style for the button on the page. */
 .btn {
   /* &:link and &:visited pseudo-classes style the button in its normal state and when the linked button has been visited, respectively. */
   /* The &:hover pseudo-class styles the button when it is being hovered. */
   /* The &:active pseudo-class styles the button when it is being clicked. */
   /* The ::after pseudo-element creates a virtual element behind the button, useful for creating certain effects. */
-  /* The .btn--white variant has a white background and a primary color text. */
-  /* The .btn--animated variant is animated on page load. */ }
+  /* The .btn--white variant has a white background and a primary color text. */ }
   .btn:link, .btn:visited {
     /* The button text is transformed to uppercase. */
     text-transform: uppercase;
@@ -188,11 +202,18 @@ h2 {
     /* The ::after pseudo-element has a slightly transparent primary color background. */ }
     .btn--white::after {
       background-color: rgba(87, 220, 205, 0.8); }
-  .btn--animated {
-    /* The animation property is set to move the button from the bottom of the page, take 0.5 seconds, start after a delay of 0.75 seconds, and ease out. */
-    animation: moveInBottom .5s ease-out .75s;
-    /* The animation-fill-mode property is set to 'backwards', which will apply the initial keyframe values as soon as the animation is applied. */
-    animation-fill-mode: backwards; }
+  .btn--blue {
+    background-color: #57dccd;
+    color: #fff;
+    /* The ::after pseudo-element has a slightly transparent primary color background. */
+    /* The .btn--animated variant is animated on page load. */ }
+    .btn--blue::after {
+      background-color: rgba(87, 220, 205, 0.8); }
+    .btn--blue--animated {
+      /* The animation property is set to move the button from the bottom of the page, take 0.5 seconds, start after a delay of 0.75 seconds, and ease out. */
+      animation: moveInBottom .5s ease-out .75s;
+      /* The animation-fill-mode property is set to 'backwards', which will apply the initial keyframe values as soon as the animation is applied. */
+      animation-fill-mode: backwards; }
 
 .card {
   display: grid;
@@ -294,13 +315,13 @@ h2 {
 .header {
   height: 95vh;
   /* Two background images are set: a linear gradient and an image from a URL. The gradient's opacity is set using rgba. */
-  background-image: linear-gradient(to right bottom, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8)), url("../images/background-image.jpg");
+  background-image: linear-gradient(to right bottom, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8)), url("../images/impact.jpg");
   /* The background image will cover the entire viewport, minus 5% of its height. */
   background-size: cover;
   /* The top of the image is set to always stay at the top, improving responsiveness. */
-  background-position: bottom;
+  background-position: center;
   /* A polygon clipping path is specified to define the visible portion of the element. */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   position: relative;
   /* .header__nav-container defines the style for the navigation container. It uses flexbox for layout, aligning items to the end of the main axis and center of the cross axis. */
   /* .header__logo-box and .header__logo define the styles for the logo container and the logo respectively. They're positioned absolutely within the header section. */
@@ -351,24 +372,56 @@ h2 {
     transform: translate(-50%, -50%);
     text-align: center; }
 
-.grid-row {
+.flex-row {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap; }
 
+.about__grid-row {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  grid-template-columns: repeat(10, 1fr);
+  justify-items: stretch; }
+  .about__grid-row__col--1 {
+    grid-column: 2/6;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center; }
+    .about__grid-row__col--1 .about__pictures {
+      width: 100%; }
+      .about__grid-row__col--1 .about__pictures--1 {
+        grid-row: 1 / 4;
+        grid-column: 3 / 7;
+        width: 75%; }
+      .about__grid-row__col--1 .about__pictures--2 {
+        grid-row: 2 / 6;
+        grid-column: 2 / 5;
+        width: 110%; }
+      .about__grid-row__col--1 .about__pictures--3 {
+        grid-row: 1 / 4;
+        grid-column: 1 / 4; }
+  .about__grid-row__col--2 {
+    grid-column: 6/10;
+    padding: 2rem 6vw;
+    display: grid;
+    align-content: center;
+    justify-items: start; }
+
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 35vh 0 20rem 0;
   margin-top: -20vh; }
 
 .section-services {
   background: #f7f7f7;
-  padding: 25rem 0;
-  margin-top: -20vh; }
+  padding: 20vh 0 25vh 0;
+  margin-top: -25vh; }
 
 .section-portfolio {
-  padding: 25rem 0;
+  padding: 25vh 0;
   position: relative;
   background-image: linear-gradient(to right bottom, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8));
   background-size: cover;
-  z-index: 100; }
+  z-index: 100;
+  background-color: #f7f7f7; }

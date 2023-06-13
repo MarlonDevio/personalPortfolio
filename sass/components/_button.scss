@@ -25,21 +25,21 @@
     /* The button moves up slightly when hovered. */
     transform: translateY(-3px);
     /* A box shadow is added to give the effect of the button being lifted. */
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
 
     /* The ::after pseudo-element is scaled up and made transparent when the button is hovered. */
-    &::after{
+    &::after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
     }
   }
 
   /* The &:active pseudo-class styles the button when it is being clicked. */
-  &:active{
+  &:active {
     /* The button moves down slightly when clicked to give the effect of being pressed. */
     transform: translateY(-1px);
     /* A smaller box shadow is applied when the button is clicked. */
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
   }
 
   /* The ::after pseudo-element creates a virtual element behind the button, useful for creating certain effects. */
@@ -64,16 +64,25 @@
     color: $color-primary-dark;
     /* The ::after pseudo-element has a slightly transparent primary color background. */
     &::after {
-      background-color: rgba($color-primary,.8);
+      background-color: rgba($color-primary, .8);
     }
   }
 
-  /* The .btn--animated variant is animated on page load. */
-  &--animated {
-    /* The animation property is set to move the button from the bottom of the page, take 0.5 seconds, start after a delay of 0.75 seconds, and ease out. */
-    animation: moveInBottom .5s ease-out .75s;
-    /* The animation-fill-mode property is set to 'backwards', which will apply the initial keyframe values as soon as the animation is applied. */
-    animation-fill-mode: backwards;
+  &--blue {
+    background-color: $color-primary;
+    color: $color-white;
+    /* The ::after pseudo-element has a slightly transparent primary color background. */
+    &::after {
+      background-color: rgba($color-primary, .8);
+    }
+
+    /* The .btn--animated variant is animated on page load. */
+    &--animated {
+      /* The animation property is set to move the button from the bottom of the page, take 0.5 seconds, start after a delay of 0.75 seconds, and ease out. */
+      animation: moveInBottom .5s ease-out .75s;
+      /* The animation-fill-mode property is set to 'backwards', which will apply the initial keyframe values as soon as the animation is applied. */
+      animation-fill-mode: backwards;
+    }
   }
 }
 

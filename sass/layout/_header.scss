@@ -3,13 +3,13 @@
 .header {
   height: 95vh;
   /* Two background images are set: a linear gradient and an image from a URL. The gradient's opacity is set using rgba. */
-  background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8)), url("../images/background-image.jpg");
+  background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8)), url("../images/impact.jpg");
   /* The background image will cover the entire viewport, minus 5% of its height. */
   background-size: cover;
   /* The top of the image is set to always stay at the top, improving responsiveness. */
-  background-position: bottom;
+  background-position: center;
   /* A polygon clipping path is specified to define the visible portion of the element. */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   position: relative;
 
 
