@@ -13,6 +13,16 @@
 
     & .about__pictures {
       width: 100%;
+      transition: all 0.5s;
+
+
+      &:hover {
+        z-index: 20;
+        scale: 1.1;
+        box-shadow: $box-shadow;
+        transform: translateY(-1rem);
+
+      }
 
       &--1 {
         grid-row: 1 / 4;
@@ -33,6 +43,7 @@
         grid-column: 1 / 4;
 
       }
+
     }
   }
 
@@ -45,3 +56,4 @@
   }
 
 }
+

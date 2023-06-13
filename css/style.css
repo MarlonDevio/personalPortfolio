@@ -144,6 +144,9 @@ h2 {
 .u-margin-bottom-2 {
   margin-bottom: 2rem; }
 
+.z-top {
+  z-index: 20; }
+
 /* The .btn class and its variants define the style for the button on the page. */
 .btn {
   /* &:link and &:visited pseudo-classes style the button in its normal state and when the linked button has been visited, respectively. */
@@ -401,7 +404,13 @@ h2 {
     grid-template-columns: repeat(6, 1fr);
     align-items: center; }
     .about__grid-row__col--1 .about__pictures {
-      width: 100%; }
+      width: 100%;
+      transition: all 0.5s; }
+      .about__grid-row__col--1 .about__pictures:hover {
+        z-index: 20;
+        scale: 1.1;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        transform: translateY(-1rem); }
       .about__grid-row__col--1 .about__pictures--1 {
         grid-row: 1 / 4;
         grid-column: 3 / 7;

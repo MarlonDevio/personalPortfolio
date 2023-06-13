@@ -22,9 +22,17 @@ navContainer.addEventListener("click", (e) => {
   }
 });
 
-aboutImgContainer.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (e.target.classList.contains("about__pictures")) {
-    console.log(e.target);
+aboutImgContainer.addEventListener(
+  "click",
+  (e) => {
+    e.preventDefault();
+    // guard clause
+
   }
-});
+
+  //
+);
+
+// function to check classes
+
+
