@@ -311,6 +311,18 @@ h2 {
     width: 100%;
     object-fit: cover; }
 
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #002025;
+  color: #fff; }
+  .footer__container {
+    display: flex; }
+  .footer__socials {
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem; }
+
 /* The .header class defines the header section of the page. It covers 95% of the viewport's height and includes a gradient and background image. */
 .header {
   height: 95vh;
