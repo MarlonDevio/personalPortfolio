@@ -312,7 +312,8 @@ h2 {
   .bg-video__content {
     height: 100%;
     width: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    background-position: center; }
 
 .footer {
   display: flex;
@@ -450,7 +451,8 @@ h2 {
   background-image: linear-gradient(to right bottom, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8));
   background-size: cover;
   z-index: 100;
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  height: 75vh; }
 
 .section-contact {
   background-image: linear-gradient(to right bottom, #57dccd, #002025);
@@ -459,7 +461,11 @@ h2 {
 .contact {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/teamwork.png);
   background-size: cover;
+  background-position: top;
   height: 70rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
-  flex-grow: 1; }
+  flex-grow: 1;
+  display: flex; }
+  .contact__form {
+    padding: 6rem; }

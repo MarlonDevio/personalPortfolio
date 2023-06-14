@@ -19,6 +19,7 @@
   background-size: cover;
   z-index: 100;
   background-color: $color-gray-light;
+  height: 75vh;
 }
 
 .section-contact {
@@ -34,9 +35,16 @@
           transparent 50%),
           url(../images/teamwork.png);
   background-size: cover;
+  background-position: top;
   height: 70rem;
   border-radius: $box-radius-3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
   flex-grow: 1;
+  display: flex;
+
+  &__form {
+    padding: 6rem;
+    //flex-basis: 50vw;
+  }
 }
 

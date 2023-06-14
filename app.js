@@ -35,4 +35,5 @@ aboutImgContainer.addEventListener(
 
 // function to check classes
 
+document.querySelector(".bg-video__content").playbackRate = 0.75;
 
