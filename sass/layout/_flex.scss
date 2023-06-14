@@ -3,5 +3,11 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 
+}
+
+.row {
+  display: flex;
+  justify-content: stretch;
+  padding: 0 15rem 15rem 15rem;
 
 }

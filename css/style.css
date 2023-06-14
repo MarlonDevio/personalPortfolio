@@ -392,6 +392,11 @@ h2 {
   justify-content: space-evenly;
   flex-wrap: wrap; }
 
+.row {
+  display: flex;
+  justify-content: stretch;
+  padding: 0 15rem 15rem 15rem; }
+
 .about__grid-row {
   display: grid;
   grid-template-rows: 1fr min-content;
@@ -446,3 +451,15 @@ h2 {
   background-size: cover;
   z-index: 100;
   background-color: #f7f7f7; }
+
+.section-contact {
+  background-image: linear-gradient(to right bottom, #57dccd, #002025);
+  padding: 15rem 15rem; }
+
+.contact {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/teamwork.png);
+  background-size: cover;
+  height: 70rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+  flex-grow: 1; }
