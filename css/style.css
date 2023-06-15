@@ -327,6 +327,25 @@ h2 {
     color: white;
     margin: 0 1rem; }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-bottom: 3px solid transparent;
+  display: block;
+  width: 90%; }
+
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #57dccd; }
+
 /* The .header class defines the header section of the page. It covers 95% of the viewport's height and includes a gradient and background image. */
 .header {
   height: 95vh;
@@ -396,11 +415,11 @@ h2 {
 .row {
   display: flex;
   justify-content: stretch;
-  padding: 0 15rem 15rem 15rem; }
+  padding: 0 10vw 0 10vw; }
 
 .about__grid-row {
   display: grid;
-  grid-template-rows: 1fr min-content;
+  grid-template-rows: 1fr;
   grid-template-columns: repeat(10, 1fr);
   justify-items: stretch; }
   .about__grid-row__col--1 {
@@ -456,7 +475,7 @@ h2 {
 
 .section-contact {
   background-image: linear-gradient(to right bottom, #57dccd, #002025);
-  padding: 15rem 15rem; }
+  padding: 20vh 0; }
 
 .contact {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/teamwork.png);
@@ -468,4 +487,5 @@ h2 {
   flex-grow: 1;
   display: flex; }
   .contact__form {
-    padding: 6rem; }
+    padding: 6rem;
+    flex-basis: 50%; }

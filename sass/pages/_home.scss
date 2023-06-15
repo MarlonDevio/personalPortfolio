@@ -24,7 +24,7 @@
 
 .section-contact {
   background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
-  padding: 15rem 15rem;
+  padding: 20vh 0;
 }
 
 .contact {
@@ -44,7 +44,7 @@
 
   &__form {
     padding: 6rem;
-    //flex-basis: 50vw;
+    flex-basis: 50%;
   }
 }
 
