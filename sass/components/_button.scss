@@ -1,6 +1,8 @@
 /* The .btn class and its variants define the style for the button on the page. */
 
 .btn {
+  &, //! we use this &, here because a button doesnt have a link and visited, but with this &, the others still apply
+
   /* &:link and &:visited pseudo-classes style the button in its normal state and when the linked button has been visited, respectively. */
   &:link,
   &:visited {
@@ -19,6 +21,10 @@
     /* Relative positioning is set to create a new context for absolutely positioned pseudo-elements. */
     position: relative;
   }
+
+  //! change for the <button> element
+  border: none;
+  cursor: pointer;
 
   /* The &:hover pseudo-class styles the button when it is being hovered. */
   &:hover {

@@ -6,6 +6,12 @@
 		<meta name="viewport"
 		      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible"/>
+
+		<!--		Icons-->
+		<script
+						crossorigin="anonymous"
+						src="https://kit.fontawesome.com/4eba67c764.js"
+		></script>
 		<!--		Google Fonts-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,11 +87,41 @@
 				</div>
 		</section>
 
-		<section class="about__skills">
+		<section class="about__skills skills">
 				<div class="u-center-text">
-						<h2 class="heading-secondary u-margin-bottom-8">
+						<h2 class="heading-secondary u-margin-bottom-6">
 								My Skills
 						</h2>
+				</div>
+				<div class="grid-container">
+						<div class="skills__container skills__container--1">
+								<i class="fa-solid fa-code"></i>
+								<h4>Web/App Design</h4>
+								<p>
+										We're passionate about helping our clients achieve their goals and
+										make a difference in their communities and the world at large.
+								</p>
+								<a href="#">Learn more</a>
+						</div>
+						<div class="skills__container skills__container--2">
+								<i class="fa-solid fa-crop"></i>
+								<h4>UI/UX Design</h4>
+								<p>
+										We create visually appealing and intuitive interfaces,
+										incorporating your vision for a compelling digital experience.
+										Boost engagement and satisfaction.
+								</p>
+								<a href="#">Learn more</a>
+						</div>
+						<div class="skills__container skills__container--3">
+								<i class="fa-solid fa-sun"></i>
+								<h4>Motivational Guidance</h4>
+								<p>
+										Unlock your potential. Overcome challenges, set goals, and stay
+										motivated. Start your transformative journey today.
+								</p>
+								<a href="#">Learn more</a>
+						</div>
 				</div>
 		</section>
 		<!--
@@ -230,6 +266,32 @@
 												<div class="form__group">
 														<input type="email" class="form__input" placeholder="email" id="email" Required>
 														<label for="email" class="form__label">Emailadres</label>
+												</div>
+
+												<div class="form__group">
+														<div class="form__radio-group">
+																<input type="radio" class="form__radio-input" id="video-call" name="choice">
+																<label for="video-call" class="form__radio-label">
+																		<!--												!!						We use the span to create our button and
+																		! hide our input. Even when it's
+																		! hidden, it will still be selected-->
+																		<span class="form__radio-button"></span>
+
+																		General Inquiries
+																</label>
+														</div>
+
+														<div class="form__radio-group u-margin-bottom-4">
+																<input type="radio" class="form__radio-input" id="general" name="choice">
+																<label for="video-call" class="form__radio-label">
+																		<span class="form__radio-button"></span>
+																		Request Video Call
+																</label>
+														</div>
+												</div>
+
+												<div class="form__group">
+														<button class="btn btn--blue btn--blue--animated">Next Step &rarr;</button>
 												</div>
 										</form>
 								</div>

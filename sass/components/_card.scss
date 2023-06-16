@@ -24,7 +24,7 @@
     height: 55rem; // Defines the height of the card side
     color: $color-black; // Sets the text color of the card side
 
-    transition: all 1s ease; //ease will make the flow more relax // Applies transition effects to all properties for a duration of 0.8 seconds
+    transition: all 0.8s ease; //ease will make the flow more relax // Applies transition effects to all properties for a duration of 0.8 seconds
     width: 35rem;
     //  making the front and the back place on top of each other
     grid-column: 1/2; // Sets the card side's position on the grid column

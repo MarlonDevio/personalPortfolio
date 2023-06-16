@@ -14,12 +14,14 @@
     & .about__pictures {
       width: 100%;
       transition: all 0.5s;
+      box-shadow: .5rem 3rem 4rem rgba($color-black, .5);
+      border-radius: 3px;
 
 
       &:hover {
         z-index: 20;
         scale: 1.1;
-        box-shadow: $box-shadow;
+        box-shadow: 1rem 1rem 3rem rgba($color-black, .4);
         transform: translateY(-1rem);
 
       }

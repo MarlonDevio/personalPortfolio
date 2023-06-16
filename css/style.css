@@ -78,6 +78,10 @@ h2 {
   color: #112c29;
   text-transform: uppercase; }
 
+h4 {
+  font-family: "lato", sans-serif;
+  font-size: 2.5rem; }
+
 /* The .heading-primary class defines the primary heading styles for the page, including color, transformation, and margin. */
 .heading-primary {
   /* The color of the text is set using the variable $color-white. */
@@ -149,12 +153,13 @@ h2 {
 
 /* The .btn class and its variants define the style for the button on the page. */
 .btn {
-  /* &:link and &:visited pseudo-classes style the button in its normal state and when the linked button has been visited, respectively. */
+  border: none;
+  cursor: pointer;
   /* The &:hover pseudo-class styles the button when it is being hovered. */
   /* The &:active pseudo-class styles the button when it is being clicked. */
   /* The ::after pseudo-element creates a virtual element behind the button, useful for creating certain effects. */
   /* The .btn--white variant has a white background and a primary color text. */ }
-  .btn:link, .btn:visited {
+  .btn, .btn:link, .btn:visited {
     /* The button text is transformed to uppercase. */
     text-transform: uppercase;
     /* Text decoration is removed to discard the default underline provided by the browser for links. */
@@ -232,7 +237,7 @@ h2 {
   .card__side {
     height: 55rem;
     color: #000000;
-    transition: all 1s ease;
+    transition: all 0.8s ease;
     width: 35rem;
     grid-column: 1/2;
     grid-row: 2/3;
@@ -333,6 +338,7 @@ h2 {
 .form__input {
   font-size: 1.5rem;
   font-family: inherit;
+  color: inherit;
   padding: 1.5rem 2rem;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -340,11 +346,86 @@ h2 {
   border-bottom: 3px solid transparent;
   display: block;
   width: 90%; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #57dccd; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #f17988; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
 
-.form__input:focus {
-  outline: none;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid #57dccd; }
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .5s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-label {
+  font-size: 2rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 5rem; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #57dccd;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -.4rem; }
+  .form__radio-button::after {
+    content: "";
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #57dccd;
+    opacity: 0;
+    transition: opacity 0.3s; }
+
+.form__radio-input:checked + .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
+.skills__container {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 5rem 2.5rem;
+  border-radius: 3px;
+  display: grid;
+  justify-items: center;
+  grid-gap: 1.5rem;
+  text-align: center;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all .3s ease; }
+  .skills__container .fa-solid {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    background-image: linear-gradient(to right, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8));
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent; }
+  .skills__container:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
 
 /* The .header class defines the header section of the page. It covers 95% of the viewport's height and includes a gradient and background image. */
 .header {
@@ -430,11 +511,13 @@ h2 {
     align-items: center; }
     .about__grid-row__col--1 .about__pictures {
       width: 100%;
-      transition: all 0.5s; }
+      transition: all 0.5s;
+      box-shadow: 0.5rem 3rem 4rem rgba(0, 0, 0, 0.5);
+      border-radius: 3px; }
       .about__grid-row__col--1 .about__pictures:hover {
         z-index: 20;
         scale: 1.1;
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.4);
         transform: translateY(-1rem); }
       .about__grid-row__col--1 .about__pictures--1 {
         grid-row: 1 / 4;
@@ -454,18 +537,33 @@ h2 {
     align-content: center;
     justify-items: start; }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-rows: min-content;
+  padding: 0 10vw;
+  grid-gap: 4rem; }
+
+main {
+  background-color: #f7f7f7; }
+
 .section-about {
   background-color: #f7f7f7;
-  padding: 35vh 0 20rem 0;
+  padding: 30vh 0 20vh 0;
   margin-top: -20vh; }
+
+.skills {
+  padding: 10rem 0 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8)), url("../images/solutions.jpg");
+  background-size: cover;
+  background-position: center; }
 
 .section-services {
   background: #f7f7f7;
-  padding: 20vh 0 25vh 0;
-  margin-top: -25vh; }
+  padding: 15vh 0 30vh 0; }
 
 .section-portfolio {
-  padding: 25vh 0;
+  padding: 15vh 0 15vh 0;
   position: relative;
   background-image: linear-gradient(to right bottom, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8));
   background-size: cover;
@@ -475,7 +573,8 @@ h2 {
 
 .section-contact {
   background-image: linear-gradient(to right bottom, #57dccd, #002025);
-  padding: 20vh 0; }
+  padding: 25vh 0;
+  margin-top: 10vh; }
 
 .contact {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/teamwork.png);
