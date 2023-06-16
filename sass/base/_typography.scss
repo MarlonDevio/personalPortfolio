@@ -89,4 +89,8 @@ h4 {
     text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
     backface-visibility: hidden;
   }
+
+  &--light {
+    background-image: linear-gradient(to right, rgba(white, 0.9), rgba($color-gray-light, 0.9));
+  }
 }

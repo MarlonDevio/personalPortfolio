@@ -9,14 +9,22 @@ main {
 }
 
 .skills {
-  padding: 10rem 0 20rem 0;
+  padding: 20rem 0;
   background-image: linear-gradient(to right bottom,
           rgba($color-primary, 0.8),
           rgba($color-primary-dark, 0.8)),
   url("../images/solutions.jpg");
   background-size: cover;
   background-position: center;
+  transform: skewY(-7deg);
+
+  // direct child selector, * is universal selector, so all child direct child elements
+  & > * {
+    transform: skewY(7deg);
+
+  }
 }
+
 
 .section-services {
   background: $color-gray-light;
@@ -24,20 +32,20 @@ main {
 }
 
 .section-portfolio {
-  padding: 15vh 0 15vh 0;
+  padding: 10vh 0 30vh 0;
 
   position: relative;
   background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8));
   background-size: cover;
   z-index: 100;
   background-color: $color-gray-light;
-  height: 75vh;
+
 }
 
 .section-contact {
   background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
-  padding: 25vh 0;
-  margin-top: 10vh;
+  padding: 10vh 0;
+  margin-top: 30vh;
 }
 
 .contact {
