@@ -62,17 +62,40 @@ function handleHoverLeave(e){
   }
 }
 
+//function for adding classes to all elements 
 function addingClass(el, classAdd) {
   return el.classList.add(classAdd)
 }
 
+//function for removing classes from an element
 function removingClass(el, classRemove) {
   return el.classList.remove(classRemove);
 }
 
+
 navContainer.addEventListener("mouseover", handleHoverEnter)
-
-
-
-
 navContainer.addEventListener("mouseout", handleHoverLeave);
+
+
+//! implement sticky navbar with Intersection Observer Api
+const obsCallback = function (entries, observer) { // this callback function
+  // will be called
+  // each time that the observed element, is intersecting the root element
+                                  // at the treshold that we defined
+  // whenever the first section (our target) is intersecting the viewport at
+  // 10%, then this function will be called no matter if we scroll up or down
+  // this function will be called with 2 arguments
+  entries.forEach(entry => {
+    console.log(entry);
+  })
+}
+const obsOption = {
+  root: null, //element that target is intersecting // with null, we can
+  treshold: 0.1,   //can have multiple arrays             // observe entire viewport
+  
+}
+const about = document.getElementById("about");
+const observer = new IntersectionObserver(obsCallback, obsOption);
+
+// target
+observer.observe(about);
