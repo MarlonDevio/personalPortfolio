@@ -4,12 +4,12 @@ main {
 
 .section-about {
   background-color: $color-gray-light;
-  padding: 30vh 0 20vh 0;
+  padding: 25rem 0 25rem 0;
   margin-top: -20vh;
 }
 
 .skills {
-  padding: 20rem 0;
+  padding: 20rem 5vw;
   background-image: linear-gradient(to right bottom,
           rgba($color-primary, 0.8),
           rgba($color-primary-dark, 0.8)),
@@ -17,6 +17,7 @@ main {
   background-size: cover;
   background-position: center;
   transform: skewY(-7deg);
+  overflow: hidden;
 
   // direct child selector, * is universal selector, so all child direct child elements
   & > * {
@@ -28,11 +29,11 @@ main {
 
 .section-services {
   background: $color-gray-light;
-  padding: 15vh 0 30vh 0;
+  padding: 15rem 0 30rem 0;
 }
 
 .section-portfolio {
-  padding: 10vh 0 30vh 0;
+  padding: 10rem 0 30rem 0;
 
   position: relative;
   background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8));
@@ -44,8 +45,8 @@ main {
 
 .section-contact {
   background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
-  padding: 10vh 0;
-  margin-top: 30vh;
+  padding: 10rem 0;
+  margin-top: 30rem;
 }
 
 .contact {

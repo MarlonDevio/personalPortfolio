@@ -1,0 +1,44 @@
+.main_grid_container {
+  display: grid;
+  grid-template-rows: 95vh min-content min-content repeat(4, min-content);
+  grid-template-columns: [side-left] 8rem [side-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 8rem [full-end];
+
+}
+
+.side-left {
+  grid-column: side-left / side-end;
+  grid-row: 1/-1;
+  background-color: $color-gray-light;
+}
+
+.full-end {
+  grid-row: 1/-1;
+  grid-column: center-end / full-end;
+}
+
+.header__grid, .about__grid, .about__skills__grid, .services__grid .contact__grid, .footer__grid {
+  grid-column: full-start / center-end;
+}
+
+.about__grid {
+  grid-row: 2/3;
+}
+
+.about__skills__grid {
+  grid-row: 3/4;
+}
+
+.services__grid {
+  grid-row: 4/5;
+  grid-column: full-start / center-end;
+}
+
+.portfolio__grid {
+  grid-row: 5/6;
+  grid-column: full-start / center-end;
+}
+
+.contact__grid {
+  grid-column: full-start / center-end;
+  grid-row: 6/7;
+}

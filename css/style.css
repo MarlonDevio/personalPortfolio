@@ -455,43 +455,39 @@ h4 {
   /* .header__nav-container defines the style for the navigation container. It uses flexbox for layout, aligning items to the end of the main axis and center of the cross axis. */
   /* .header__logo-box and .header__logo define the styles for the logo container and the logo respectively. They're positioned absolutely within the header section. */
   /* .header__nav-container__nav-items and its child .nav-item define the styles for the navigation items. */
+  /* .nav-item defines individual navigation links. On hover, a bottom border expands to fill the width of the link. */
   /* .header__text-box positions a text box in the center of the header section. */ }
   .header__nav-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    padding: 3em 5em; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
+    padding: 3rem 5rem; }
+    .header__nav-container__nav-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem; }
+      .header__nav-container__nav-items .nav-item {
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #fff;
+        position: relative;
+        /* ::after pseudoelement is used to create a dynamic bottom border on hover. */
+        /* On hover, the width of the ::after pseudoelement (bottom border) expands to 100%. */ }
+        .header__nav-container__nav-items .nav-item::after {
+          content: "";
+          height: 3px;
+          width: 0;
+          background: #afeee6;
+          border-radius: 3px;
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+          transition: all 0.5s; }
+        .header__nav-container__nav-items .nav-item:hover::after {
+          width: 100%; }
   .header__logo {
     height: 8rem; }
-  .header__nav-container__nav-items {
-    display: flex;
-    gap: 3em;
-    flex-wrap: wrap;
-    /* .nav-item defines individual navigation links. On hover, a bottom border expands to fill the width of the link. */ }
-    .header__nav-container__nav-items .nav-item {
-      text-decoration: none;
-      font-size: 1.6rem;
-      font-weight: 500;
-      color: #fff;
-      position: relative;
-      /* ::after pseudoelement is used to create a dynamic bottom border on hover. */
-      /* On hover, the width of the ::after pseudoelement (bottom border) expands to 100%. */ }
-      .header__nav-container__nav-items .nav-item::after {
-        content: "";
-        height: 3px;
-        width: 0;
-        background: #afeee6;
-        border-radius: 3px;
-        position: absolute;
-        bottom: -6px;
-        left: 0;
-        transition: all 0.5s; }
-      .header__nav-container__nav-items .nav-item:hover::after {
-        width: 100%; }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -509,7 +505,7 @@ h4 {
 .row {
   display: flex;
   justify-content: stretch;
-  padding: 0 10vw 0 10vw; }
+  padding: 0 10rem 0 10rem; }
 
 .about__grid-row {
   display: grid;
@@ -545,7 +541,7 @@ h4 {
         grid-column: 1 / 4; }
   .about__grid-row__col--2 {
     grid-column: 6/10;
-    padding: 2rem 6vw;
+    padding: 2rem 6rem;
     display: grid;
     align-content: center;
     justify-items: start; }
@@ -557,29 +553,65 @@ h4 {
   padding: 0 10vw;
   grid-gap: 4rem; }
 
+.main_grid_container {
+  display: grid;
+  grid-template-rows: 95vh min-content min-content repeat(4, min-content);
+  grid-template-columns: [side-left] 8rem [side-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 8rem [full-end]; }
+
+.side-left {
+  grid-column: side-left / side-end;
+  grid-row: 1/-1;
+  background-color: #f7f7f7; }
+
+.full-end {
+  grid-row: 1/-1;
+  grid-column: center-end / full-end; }
+
+.header__grid, .about__grid, .about__skills__grid, .services__grid .contact__grid, .footer__grid {
+  grid-column: full-start / center-end; }
+
+.about__grid {
+  grid-row: 2/3; }
+
+.about__skills__grid {
+  grid-row: 3/4; }
+
+.services__grid {
+  grid-row: 4/5;
+  grid-column: full-start / center-end; }
+
+.portfolio__grid {
+  grid-row: 5/6;
+  grid-column: full-start / center-end; }
+
+.contact__grid {
+  grid-column: full-start / center-end;
+  grid-row: 6/7; }
+
 main {
   background-color: #f7f7f7; }
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 30vh 0 20vh 0;
+  padding: 25rem 0 25rem 0;
   margin-top: -20vh; }
 
 .skills {
-  padding: 20rem 0;
+  padding: 20rem 5vw;
   background-image: linear-gradient(to right bottom, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8)), url("../images/solutions.jpg");
   background-size: cover;
   background-position: center;
-  transform: skewY(-7deg); }
+  transform: skewY(-7deg);
+  overflow: hidden; }
   .skills > * {
     transform: skewY(7deg); }
 
 .section-services {
   background: #f7f7f7;
-  padding: 15vh 0 30vh 0; }
+  padding: 15rem 0 30rem 0; }
 
 .section-portfolio {
-  padding: 10vh 0 30vh 0;
+  padding: 10rem 0 30rem 0;
   position: relative;
   background-image: linear-gradient(to right bottom, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8));
   background-size: cover;
@@ -588,8 +620,8 @@ main {
 
 .section-contact {
   background-image: linear-gradient(to right bottom, #57dccd, #002025);
-  padding: 10vh 0;
-  margin-top: 30vh; }
+  padding: 10rem 0;
+  margin-top: 30rem; }
 
 .contact {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/teamwork.png);
