@@ -46,6 +46,7 @@
       font-weight: 500;
       color: $color-white;
       position: relative;
+      transition: all 0.5s;
 
 
       /* ::after pseudoelement is used to create a dynamic bottom border on hover. */

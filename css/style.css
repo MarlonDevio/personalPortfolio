@@ -153,6 +153,12 @@ h4 {
 .z-top {
   z-index: 20; }
 
+.opacity-add {
+  opacity: 0.5; }
+
+.scale-add {
+  scale: 1.2; }
+
 /* The .btn class and its variants define the style for the button on the page. */
 .btn {
   border: none;
@@ -478,6 +484,7 @@ h4 {
       font-weight: 500;
       color: #fff;
       position: relative;
+      transition: all 0.5s;
       /* ::after pseudoelement is used to create a dynamic bottom border on hover. */
       /* On hover, the width of the ::after pseudoelement (bottom border) expands to 100%. */ }
       .header__nav-container__nav-items .nav-item::after {
