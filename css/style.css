@@ -446,6 +446,12 @@ h4 {
 .work__img img {
   max-width: 100%; }
 
+.sticky {
+  position: fixed;
+  background-color: rgba(25, 255, 255, 0.95);
+  display: flex;
+  z-index: 150; }
+
 /* The .header class defines the header section of the page. It covers 95% of the viewport's height and includes a gradient and background image. */
 .header {
   height: 95vh;
