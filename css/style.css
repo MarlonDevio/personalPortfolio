@@ -526,7 +526,7 @@ h4 {
 
 .about__grid-row {
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: min-content;
   grid-template-columns: repeat(10, 1fr);
   justify-items: stretch; }
   .about__grid-row__col--1 {
