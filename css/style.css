@@ -565,7 +565,7 @@ h4 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(5rem, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
   grid-template-rows: min-content;
   padding: 0 10rem;
   grid-gap: 4rem; }

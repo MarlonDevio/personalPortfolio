@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(
                   auto-fit,
-                  minmax(unquote("min(5rem, 100%)"), 1fr));
+                  minmax(unquote("min(25rem, 100%)"), 1fr));
   grid-template-rows: min-content;
   padding: 0 10rem;
   grid-gap: 4rem;
