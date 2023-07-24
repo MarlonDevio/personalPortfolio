@@ -4,12 +4,12 @@ main {
 
 .section-about {
   background-color: $color-gray-light;
-  padding: 30vh 0 20vh 0;
+
   margin-top: -20vh;
 }
 
 .skills {
-  padding: 20rem 0;
+
   background-image: linear-gradient(to right bottom,
           rgba($color-primary, 0.8),
           rgba($color-primary-dark, 0.8)),
@@ -28,11 +28,11 @@ main {
 
 .section-services {
   background: $color-gray-light;
-  padding: 15vh 0 30vh 0;
+
 }
 
 .section-portfolio {
-  padding: 10vh 0 30vh 0;
+
 
   position: relative;
   background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8));
@@ -44,8 +44,7 @@ main {
 
 .section-contact {
   background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
-  padding: 10vh 0;
-  margin-top: 30vh;
+
 }
 
 .contact {
@@ -57,15 +56,15 @@ main {
   url(../images/teamwork.png);
   background-size: cover;
   background-position: top;
-  height: 70rem;
+
   border-radius: $box-radius-3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
-  flex-grow: 1;
+
   display: flex;
 
   &__form {
     padding: 6rem;
-    flex-basis: 50%;
+
   }
 }
 

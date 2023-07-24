@@ -10,24 +10,16 @@
   background-position: center;
   /* A polygon clipping path is specified to define the visible portion of the element. */
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-  position: relative;
-
 
   /* .header__nav-container defines the style for the navigation container. It uses flexbox for layout, aligning items to the end of the main axis and center of the cross axis. */
   &__nav-container{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 3em 5em;
 
   }
-
   /* .header__logo-box and .header__logo define the styles for the logo container and the logo respectively. They're positioned absolutely within the header section. */
-  &__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-  }
   &__logo {
     height: 8rem;
   }
@@ -71,11 +63,17 @@
 
   /* .header__text-box positions a text box in the center of the header section. */
   &__text-box {
-    position: absolute;
-    top: 50%; /* relative to the parent element */
-    left: 50%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     /* The translate transform shifts the position of the element by a percentage of its own size, effectively centering it. */
-    transform: translate(-50%, -50%);
-    text-align: center;
   }
+}
+
+.heading-primary_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

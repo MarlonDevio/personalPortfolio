@@ -1,0 +1,43 @@
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 1rem repeat(10, 1fr) 1rem;
+  grid-template-rows: 95vh repeat(7, min-content);
+}
+
+header {
+  grid-row: 1;
+  grid-column: 2 / 12;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#about {
+  grid-row: 2;
+  grid-column: 2/12;
+}
+
+.about__skills {
+  grid-row: 3;
+  grid-column: 2/12;
+}
+
+#services {
+  grid-row: 4;
+  grid-column: 2/12;
+}
+
+#portfolio {
+  grid-row: 5;
+  grid-column: 2/12;
+}
+
+#contact {
+  grid-row: 6;
+  grid-column: 2/12;
+}
+
+footer {
+  grid-row: 7;
+  grid-column: 2/12;
+}

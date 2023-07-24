@@ -2,335 +2,338 @@
 <html lang="en">
 <head>
 
-		<meta charset="UTF-8">
-		<meta name="viewport"
-		      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-		<meta http-equiv="X-UA-Compatible"/>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible"/>
 
-		<!--		Icons-->
-		<script
-						crossorigin="anonymous"
-						src="https://kit.fontawesome.com/4eba67c764.js"
-		></script>
-		<!--		Google Fonts-->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&family=Orbitron:wght@700&display=swap"
-		      rel="stylesheet">
+	<!--		Icons-->
+	<script
+			crossorigin="anonymous"
+			src="https://kit.fontawesome.com/4eba67c764.js"
+	></script>
+	<!--		Google Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&family=Orbitron:wght@700&display=swap"
+	      rel="stylesheet">
 
-		<!--		CSS file-->
-		<link rel="stylesheet" href="./css/style.css">
-		<title>Marlon</title>
+	<!--		CSS file-->
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Marlon</title>
 </head>
 <body>
 
-<!--*********************************************************HERO SECTION**************************************-->
-<header class="header" id="header">
-		<!--		Img is inline element. Best practice => put img in div container, and then position the div-->
-		<nav class="header__nav-container">
+	<div class="main-wrapper">
+
+		<!--*********************************************************HERO SECTION**************************************-->
+		<header class="header" id="header">
+			<!--		Img is inline element. Best practice => put img in div container, and then position the div-->
+			<nav class="header__nav-container">
 				<div class="header__logo-box">
-						<img src="./images/logo_transparent.png" alt="logo" class="header__logo">
+					<img src="./images/logo_transparent.png" alt="logo" class="header__logo">
 				</div>
 				<div class="header__nav-container__nav-items nav-items">
-						<a href="" data-nav="home" class="nav-item nav-item--1 active">Home</a>
-						<a href="#about" data-nav="about" class="nav-item nav-item--2">About</a>
-						<a href="#services" data-nav="services" class="nav-item nav-item--3">Services</a>
-						<a href="#portfolio" data-nav="portfolio" class="nav-item nav-item--4">Portfolio</a>
-						<a href="#contact" data-nav="contact" class="nav-item nav-item--5">Contact</a>
+					<a href="" data-nav="home" class="nav-item nav-item--1 active">Home</a>
+					<a href="#about" data-nav="about" class="nav-item nav-item--2">About</a>
+					<a href="#services" data-nav="services" class="nav-item nav-item--3">Services</a>
+					<a href="#portfolio" data-nav="portfolio" class="nav-item nav-item--4">Portfolio</a>
+					<a href="#contact" data-nav="contact" class="nav-item nav-item--5">Contact</a>
 				</div>
-		</nav>
+			</nav>
 
-		<div class="header__text-box">
-				<h1 class="heading-primary">
-						<span class="heading-primary--main">Marlon</span>
-						<span class="heading-primary--sub">Your Business Vision<br> My Fullstack Mission</span>
+			<div class="header__text-box">
+				<h1 class="heading-primary heading-primary_container">
+					<span class="heading-primary--main">Marlon</span>
+					<span class="heading-primary--sub">Your Business Vision<br> My Fullstack Mission</span>
 				</h1>
 
 				<!--BUTTON-->
 				<a href="#" class="btn btn--white btn--animated">Launch Vision</a>
-		</div>
-</header>
-<!---->
-<main>
+			</div>
+		</header>
+		<!---->
 		<!----/****-*****--about----about----about----about----about----about----about----about--*******************
 		************************************************************************************************************************/-->
 		<section id="about" class="section-about">
-				<div class="u-center-text u-margin-bottom-8">
-						<h2 class="heading-secondary">
-								About me
-						</h2>
-				</div>
+			<div class="u-center-text u-margin-bottom-8">
+				<h2 class="heading-secondary">
+					About me
+				</h2>
+			</div>
 
-				<div class="about about__grid-row ">
-						<div class="about__grid-row__col--1">
-								<img src="./images/world.jpg" alt="Image of the world" class="about__pictures about__pictures--1"
-								     data-img="1">
-								<img src="./images/coaching.jpg" alt="Image of teamwork and mentorship"
-								     class="about__pictures about__pictures--2" data-img="2">
-								<img src="./images/take-over.jpg" alt="Image of a programmer looking over the city"
-								     class="about__pictures about__pictures--3" data-img="3">
+			<div class="about about__grid-row ">
+				<div class="about__grid-row__col--1">
+					<img src="./images/world.jpg" alt="Image of the world"
+					     class="about__pictures about__pictures--1"
+					     data-img="1">
+					<img src="./images/coaching.jpg" alt="Image of teamwork and mentorship"
+					     class="about__pictures about__pictures--2" data-img="2">
+					<img src="./images/take-over.jpg" alt="Image of a programmer looking over the city"
+					     class="about__pictures about__pictures--3" data-img="3">
 
-						</div>
-						<div class="about__grid-row__col--2 grid-col--2 u">
-								<h3 class="heading-tertiary u-margin-bottom-2">Innovating Digital Solutions for Impactful Change</h3>
-								<p class="about__text u-margin-bottom-4">
-										I believe that everyone has the potential to make a positive
-										impact in the
-										world. My mission is to help individuals and organizations unlock that potential by providing
-										innovative digital solutions that drive growth, improve user experience, and create meaningful
-										change.
-								</p>
-								<a href="#" class="btn btn--blue btn--animated">
-										Unlock Potential Now!
-								</a>
-						</div>
 				</div>
+				<div class="about__grid-row__col--2 grid-col--2 u">
+					<h3 class="heading-tertiary u-margin-bottom-2">Innovating Digital Solutions for Impactful
+					                                               Change</h3>
+					<p class="about__text u-margin-bottom-4">
+						I believe that everyone has the potential to make a positive
+						impact in the
+						world. My mission is to help individuals and organizations unlock that potential by
+						providing
+						innovative digital solutions that drive growth, improve user experience, and create
+						meaningful
+						change.
+					</p>
+					<a href="#" class="btn btn--blue btn--animated">
+						Unlock Potential Now!
+					</a>
+				</div>
+			</div>
 		</section>
 
 		<section class="about__skills skills">
 
-				<div class="grid-container">
-						<div class="grid-container__col skills__container skills__container--1">
-								<i class="fa-solid fa-code"></i>
-								<h4>Web/App Design</h4>
-								<p>
-										We're passionate about helping our clients achieve their goals and
-										make a difference in their communities and the world at large.
-								</p>
-								<a href="#">Learn more</a>
-						</div>
-						<div class="grid-container__col skills__container skills__container--2">
-								<i class="fa-solid fa-crop"></i>
-								<h4>UI/UX Design</h4>
-								<p>
-										We create visually appealing and intuitive interfaces,
-										incorporating your vision for a compelling digital experience.
-										Boost engagement and satisfaction.
-								</p>
-								<a href="#">Learn more</a>
-						</div>
-						<div class="grid-container__col skills__container skills__container--3">
-								<i class="fa-solid fa-sun"></i>
-								<h4>Motivational Guidance</h4>
-								<p>
-										Unlock your potential. Overcome challenges, set goals, and stay
-										motivated. Start your transformative journey today.
-								</p>
-								<a href="#">Learn more</a>
-						</div>
+			<div class="grid-container">
+				<div class="grid-container__col skills__container skills__container--1">
+					<i class="fa-solid fa-code"></i>
+					<h4>Web/App Design</h4>
+					<p>
+						We're passionate about helping our clients achieve their goals and
+						make a difference in their communities and the world at large.
+					</p>
+					<a href="#">Learn more</a>
 				</div>
+				<div class="grid-container__col skills__container skills__container--2">
+					<i class="fa-solid fa-crop"></i>
+					<h4>UI/UX Design</h4>
+					<p>
+						We create visually appealing and intuitive interfaces,
+						incorporating your vision for a compelling digital experience.
+						Boost engagement and satisfaction.
+					</p>
+					<a href="#">Learn more</a>
+				</div>
+				<div class="grid-container__col skills__container skills__container--3">
+					<i class="fa-solid fa-sun"></i>
+					<h4>Motivational Guidance</h4>
+					<p>
+						Unlock your potential. Overcome challenges, set goals, and stay
+						motivated. Start your transformative journey today.
+					</p>
+					<a href="#">Learn more</a>
+				</div>
+			</div>
 		</section>
 		<!--
 		*****--SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES--*******************-->
 		<section id="services" class="section-services">
-				<div class="u-center-text">
-						<h2 class="heading-secondary u-margin-bottom-6">
-								Services
-						</h2>
+			<div class="u-center-text">
+				<h2 class="heading-secondary u-margin-bottom-6">
+					Services
+				</h2>
+			</div>
+
+			<div class="flex-row">
+				<div class="flex-row__col col-1-of-3">
+					<!--			***********							CARD 1********************-->
+					<div class="card">
+
+						<div class="card__side card__side--front card__side--front-1">
+							<div class="card__container">
+								<div class="card__picture card__picture--1">
+
+								</div>
+								<h4 class="card__heading">
+									<span class="card__heading-span card__heading-span--1">Web/App<br>Design</span>
+								</h4>
+								<div class="card__details">
+									<ul>
+										<li>Passionate Client Assistance</li>
+										<li>Goal Achievement Support</li>
+										<li>Community Impact Enhancement</li>
+										<li>Global Difference Making</li>
+										<li>Empowering Change Initiatives</li>
+
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class="card__side card__side--back card__side--back-1">
+							CONSTRUCTION
+						</div>
+					</div>
 				</div>
+				<div class="flex-row__col col-2-of-3">
+					<!--								**************		CARD 2-->
+					<div class="card">
 
-				<div class="flex-row">
-						<div class="flex-row__col col-1-of-3">
-								<!--			***********							CARD 1********************-->
-								<div class="card">
+						<div class="card__side card__side--front card__side--front-2">
+							<div class="card__container">
+								<div class="card__picture card__picture--2">
 
-										<div class="card__side card__side--front card__side--front-1">
-												<div class="card__container">
-														<div class="card__picture card__picture--1">
-
-														</div>
-														<h4 class="card__heading">
-																<span class="card__heading-span card__heading-span--1">Web/App<br>Design</span>
-														</h4>
-														<div class="card__details">
-																<ul>
-																		<li>Passionate Client Assistance</li>
-																		<li>Goal Achievement Support</li>
-																		<li>Community Impact Enhancement</li>
-																		<li>Global Difference Making</li>
-																		<li>Empowering Change Initiatives</li>
-
-																</ul>
-														</div>
-												</div>
-
-										</div>
-										<div class="card__side card__side--back card__side--back-1">
-												CONSTRUCTION
-										</div>
 								</div>
-						</div>
-						<div class="flex-row__col col-2-of-3">
-								<!--								**************		CARD 2-->
-								<div class="card">
-
-										<div class="card__side card__side--front card__side--front-2">
-												<div class="card__container">
-														<div class="card__picture card__picture--2">
-
-														</div>
-														<h4 class="card__heading">
-																<span class="card__heading-span card__heading-span--2">UI/UX<br>Design</span>
-														</h4>
-														<div class="card__details">
-																<ul>
-																		<li>Creating Visual Appeal</li>
-																		<li>Intuitive Interface Design</li>
-																		<li>Boosting Engagement</li>
-																		<li>Vision Incorporation</li>
-																		<li>Enhancing Satisfaction</li>
-																</ul>
-														</div>
-												</div>
-										</div>
-										<div class="card__side card__side--back card__side--back-2">
-												CONSTRUCTION
-										</div>
+								<h4 class="card__heading">
+									<span class="card__heading-span card__heading-span--2">UI/UX<br>Design</span>
+								</h4>
+								<div class="card__details">
+									<ul>
+										<li>Creating Visual Appeal</li>
+										<li>Intuitive Interface Design</li>
+										<li>Boosting Engagement</li>
+										<li>Vision Incorporation</li>
+										<li>Enhancing Satisfaction</li>
+									</ul>
 								</div>
+							</div>
 						</div>
-						<div class="flex-row__col col-3-of-3">
-								<!--						**************				CARD 3-->
+						<div class="card__side card__side--back card__side--back-2">
+							CONSTRUCTION
+						</div>
+					</div>
+				</div>
+				<div class="flex-row__col col-3-of-3">
+					<!--						**************				CARD 3-->
 
-								<div class="card">
+					<div class="card">
 
-										<div class="card__side card__side--front card__side--front-3">
-												<div class="card__container">
-														<div class="card__picture card__picture--3">
+						<div class="card__side card__side--front card__side--front-3">
+							<div class="card__container">
+								<div class="card__picture card__picture--3">
 
-														</div>
-														<h4 class="card__heading">
+								</div>
+								<h4 class="card__heading">
 																<span class="card__heading-span card__heading-span--3">Motivational<br>Guidance
 																</span>
-														</h4>
-														<div class="card__details">
-																<ul>
-																		<li>Unlocking Potential</li>
+								</h4>
+								<div class="card__details">
+									<ul>
+										<li>Unlocking Potential</li>
 
-																		<li>Overcoming Challenges</li>
+										<li>Overcoming Challenges</li>
 
-																		<li>Setting Goals</li>
+										<li>Setting Goals</li>
 
-																		<li>Maintaining Motivation</li>
+										<li>Maintaining Motivation</li>
 
-																		<li>Initiating Transformative Journey</li>
+										<li>Initiating Transformative Journey</li>
 
-																</ul>
+									</ul>
 
-														</div>
-												</div>
-
-										</div>
-										<div class="card__side card__side--back card__side--back-3">
-												CONSTRUCTION
-										</div>
 								</div>
+							</div>
+
 						</div>
+						<div class="card__side card__side--back card__side--back-3">
+							CONSTRUCTION
+						</div>
+					</div>
 				</div>
+			</div>
 		</section>
 
 		<!--
 	*****--Portfolio----Portfolio----Portfolio----Portfolio----Portfolio----Portfolio----Portfolio----Portfolio--*-->
 		<section id="portfolio" class="section-portfolio">
-				<div class="gradient-background">
-						<div class="bg-video">
-								<video class="bg-video__content" autoplay muted loop>
-										<source src="videos/145864%20(Original).mp4" type="video/mp4">
-										<source src="videos/145864%20(Original).webm" type="video/webm">
-										Your browser is not supported
-								</video>
-						</div>
+			<div class="gradient-background">
+				<div class="bg-video">
+					<video class="bg-video__content" autoplay muted loop>
+						<source src="videos/145864%20(Original).mp4" type="video/mp4">
+						<source src="videos/145864%20(Original).webm" type="video/webm">
+						Your browser is not supported
+					</video>
 				</div>
-				<div class="u-center-text u-margin-bottom-6">
-						<h1 class="heading-secondary heading-secondary--light">Portfolio</h1>
+			</div>
+			<div class="u-center-text u-margin-bottom-6">
+				<h1 class="heading-secondary heading-secondary--light">Portfolio</h1>
+			</div>
+			<div class="grid-container grid-container__portfolio">
+				<div class="grid-container__col grid-container__col__portfolio-box grid-container__col__portfolio-box--1">
+					<div class="work__img">
+						<img src="./images/work-1.jpg" alt="">
+					</div>
+					<h4 class="social-media-app">Social Media App</h4>
 				</div>
-				<div class="grid-container grid-container__portfolio">
-						<div class="grid-container__col grid-container__col__portfolio-box grid-container__col__portfolio-box--1">
-								<div class="work__img">
-										<img src="./images/work-1.jpg" alt="">
-								</div>
-								<h4 class="social-media-app">Social Media App</h4>
-						</div>
-						<div class="grid-container__col grid-container__col__portfolio-box grid-container__col__portfolio-box--2">
-								<div class="work__img">
-										<img src="./images/work-1.jpg" alt="">
-								</div>
-								<h4 class="social-media-app">Music App</h4>
-						</div>
-						<div class="grid-container__col grid-container__col__portfolio-box grid-container__col__portfolio-box--3">
-								<div class="work__img">
-										<img src="./images/work-1.jpg" alt="">
-								</div>
-								<h4 class="social-media-app">Online Shopping App</h4>
-						</div>
+				<div class="grid-container__col grid-container__col__portfolio-box grid-container__col__portfolio-box--2">
+					<div class="work__img">
+						<img src="./images/work-1.jpg" alt="">
+					</div>
+					<h4 class="social-media-app">Music App</h4>
 				</div>
-
+				<div class="grid-container__col grid-container__col__portfolio-box grid-container__col__portfolio-box--3">
+					<div class="work__img">
+						<img src="./images/work-1.jpg" alt="">
+					</div>
+					<h4 class="social-media-app">Online Shopping App</h4>
+				</div>
+			</div>
 		</section>
 
 		<!--			*****--CONTACT----CONTACT----CONTACT----CONTACT----CONTACT----CONTACT----CONTACT----CONTACT--**-->
 		<section id="contact" class="section-contact">
-				<div class="row">
-						<div class="contact">
-								<div class="contact__form">
-										<form action="#" class="form">
-												<div class="u-margin-bottom-4">
-														<h2 class="heading-secondary">
-																Contact me
-														</h2>
-												</div>
-												<div class="form__group">
-														<input type="text" class="form__input" placeholder="Full Name" id="name" Required>
-														<label for="name" class="form__label">Full Name</label>
-												</div>
+			<div class="row">
+				<div class="contact">
+					<div class="contact__form">
+						<form action="#" class="form">
+							<div class="u-margin-bottom-4">
+								<h2 class="heading-secondary">
+									Contact me
+								</h2>
+							</div>
+							<div class="form__group">
+								<input type="text" class="form__input" placeholder="Full Name" id="name" Required>
+								<label for="name" class="form__label">Full Name</label>
+							</div>
 
-												<div class="form__group">
-														<input type="email" class="form__input" placeholder="email" id="email" Required>
-														<label for="email" class="form__label">Emailadres</label>
-												</div>
+							<div class="form__group">
+								<input type="email" class="form__input" placeholder="email" id="email" Required>
+								<label for="email" class="form__label">Emailadres</label>
+							</div>
 
-												<div class="form__group">
-														<div class="form__radio-group">
-																<input type="radio" class="form__radio-input" id="video-call" name="choice">
-																<label for="video-call" class="form__radio-label">
-																		<!--												!!						We use the span to create our button and
-																		! hide our input. Even when it's
-																		! hidden, it will still be selected-->
-																		<span class="form__radio-button"></span>
+							<div class="form__group">
+								<div class="form__radio-group">
+									<input type="radio" class="form__radio-input" id="video-call" name="choice">
+									<label for="video-call" class="form__radio-label">
+										<!--												!!						We use the span to create our button and
+										! hide our input. Even when it's
+										! hidden, it will still be selected-->
+										<span class="form__radio-button"></span>
 
-																		General Inquiries
-																</label>
-														</div>
-
-														<div class="form__radio-group u-margin-bottom-4">
-																<input type="radio" class="form__radio-input" id="general" name="choice">
-																<label for="video-call" class="form__radio-label">
-																		<span class="form__radio-button"></span>
-																		Request Video Call
-																</label>
-														</div>
-												</div>
-
-												<div class="form__group">
-														<button class="btn btn--blue btn--blue--animated">Next Step &rarr;</button>
-												</div>
-										</form>
+										General Inquiries
+									</label>
 								</div>
-						</div>
-				</div>
-		</section>
-</main>
 
-<footer class="footer">
-		<div class="footer__author">Under Construction</div>
-		<div class="footer__copyright">Marlon H. Copyright 2023</div>
-		Under construction
-		<div class="footer__socials__container">
+								<div class="form__radio-group u-margin-bottom-4">
+									<input type="radio" class="form__radio-input" id="general" name="choice">
+									<label for="video-call" class="form__radio-label">
+										<span class="form__radio-button"></span>
+										Request Video Call
+									</label>
+								</div>
+							</div>
+
+							<div class="form__group">
+								<button class="btn btn--blue btn--blue--animated">Next Step &rarr;</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="footer__author">Under Construction</div>
+			<div class="footer__copyright">Marlon H. Copyright 2023</div>
+			Under construction
+			<div class="footer__socials__container">
 				<a class="footer__socials footer__socials--linkedin" href="#">LinkedIn</a>
 				<a class="footer__socials footer__socials--instagram" href="#">Instagram</a>
 				<a class="footer__socials footer__socials--facebook" href="#">Facebook</a>
-		</div>
+			</div>
+		</footer>
 
-
-</footer>
-<script src="./app.js"></script>
+	</div>
+	<script src="./app.js"></script>
 </body>
 </html>

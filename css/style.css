@@ -463,20 +463,15 @@ h4 {
   background-position: center;
   /* A polygon clipping path is specified to define the visible portion of the element. */
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-  position: relative;
   /* .header__nav-container defines the style for the navigation container. It uses flexbox for layout, aligning items to the end of the main axis and center of the cross axis. */
   /* .header__logo-box and .header__logo define the styles for the logo container and the logo respectively. They're positioned absolutely within the header section. */
   /* .header__nav-container__nav-items and its child .nav-item define the styles for the navigation items. */
   /* .header__text-box positions a text box in the center of the header section. */ }
   .header__nav-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 3em 5em; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
   .header__logo {
     height: 8rem; }
   .header__nav-container__nav-items {
@@ -506,80 +501,60 @@ h4 {
       .header__nav-container__nav-items .nav-item:hover::after {
         width: 100%; }
   .header__text-box {
-    position: absolute;
-    top: 50%;
-    /* relative to the parent element */
-    left: 50%;
-    /* The translate transform shifts the position of the element by a percentage of its own size, effectively centering it. */
-    transform: translate(-50%, -50%);
-    text-align: center; }
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* The translate transform shifts the position of the element by a percentage of its own size, effectively centering it. */ }
 
-.flex-row {
+.heading-primary_container {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap; }
+  flex-direction: column;
+  align-items: center; }
 
-.row {
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 1rem repeat(10, 1fr) 1rem;
+  grid-template-rows: 95vh repeat(7, min-content); }
+
+header {
+  grid-row: 1;
+  grid-column: 2 / 12;
   display: flex;
-  justify-content: stretch;
-  padding: 0 10vw 0 10vw; }
+  flex-direction: column; }
 
-.about__grid-row {
-  display: grid;
-  grid-template-rows: min-content;
-  grid-template-columns: repeat(10, 1fr);
-  justify-items: stretch; }
-  .about__grid-row__col--1 {
-    grid-column: 2/6;
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(6, 1fr);
-    align-items: center; }
-    .about__grid-row__col--1 .about__pictures {
-      width: 100%;
-      transition: all 0.5s;
-      box-shadow: 0.5rem 3rem 4rem rgba(0, 0, 0, 0.5);
-      border-radius: 3px; }
-      .about__grid-row__col--1 .about__pictures:hover {
-        z-index: 20;
-        scale: 1.1;
-        box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.4);
-        transform: translateY(-1rem); }
-      .about__grid-row__col--1 .about__pictures--1 {
-        grid-row: 1 / 4;
-        grid-column: 3 / 7;
-        width: 75%; }
-      .about__grid-row__col--1 .about__pictures--2 {
-        grid-row: 2 / 6;
-        grid-column: 2 / 5;
-        width: 110%; }
-      .about__grid-row__col--1 .about__pictures--3 {
-        grid-row: 1 / 4;
-        grid-column: 1 / 4; }
-  .about__grid-row__col--2 {
-    grid-column: 6/10;
-    padding: 2rem 6vw;
-    display: grid;
-    align-content: center;
-    justify-items: start; }
+#about {
+  grid-row: 2;
+  grid-column: 2/12; }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(28rem, 100%), 1fr));
-  grid-template-rows: min-content;
-  padding: 0 10vw;
-  grid-gap: 4rem; }
+.about__skills {
+  grid-row: 3;
+  grid-column: 2/12; }
+
+#services {
+  grid-row: 4;
+  grid-column: 2/12; }
+
+#portfolio {
+  grid-row: 5;
+  grid-column: 2/12; }
+
+#contact {
+  grid-row: 6;
+  grid-column: 2/12; }
+
+footer {
+  grid-row: 7;
+  grid-column: 2/12; }
 
 main {
   background-color: #f7f7f7; }
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 30vh 0 20vh 0;
   margin-top: -20vh; }
 
 .skills {
-  padding: 20rem 0;
   background-image: linear-gradient(to right bottom, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8)), url("../images/solutions.jpg");
   background-size: cover;
   background-position: center;
@@ -588,11 +563,9 @@ main {
     transform: skewY(7deg); }
 
 .section-services {
-  background: #f7f7f7;
-  padding: 15vh 0 30vh 0; }
+  background: #f7f7f7; }
 
 .section-portfolio {
-  padding: 10vh 0 30vh 0;
   position: relative;
   background-image: linear-gradient(to right bottom, rgba(87, 220, 205, 0.8), rgba(0, 32, 37, 0.8));
   background-size: cover;
@@ -600,19 +573,14 @@ main {
   background-color: #f7f7f7; }
 
 .section-contact {
-  background-image: linear-gradient(to right bottom, #57dccd, #002025);
-  padding: 10vh 0;
-  margin-top: 30vh; }
+  background-image: linear-gradient(to right bottom, #57dccd, #002025); }
 
 .contact {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/teamwork.png);
   background-size: cover;
   background-position: top;
-  height: 70rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
-  flex-grow: 1;
   display: flex; }
   .contact__form {
-    padding: 6rem;
-    flex-basis: 50%; }
+    padding: 6rem; }

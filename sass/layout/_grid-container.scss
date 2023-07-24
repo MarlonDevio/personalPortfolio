@@ -1,12 +1,1 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(
-                  auto-fit,
-                  minmax(unquote("min(28rem, 100%)"), 1fr));
-  grid-template-rows: min-content;
-  padding: 0 10vw;
-  grid-gap: 4rem;
-
-}
-
 
